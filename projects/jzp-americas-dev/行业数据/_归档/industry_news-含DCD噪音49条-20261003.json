@@ -1,0 +1,2050 @@
+[
+ {
+  "id": "6b31ee96544f40c8",
+  "category": "market_supply",
+  "source_id": "utilitydive",
+  "title": "FERC rejects TransAlta 202(c) cost recovery plan for Centralia unit",
+  "summary_zh": "",
+  "summary_raw": "Only utilities in the Northwest should pay the nearly $20 million in expenses for a 90-day order covering the Centralia unit, and despite the unit’s lack of output, payment is due, the agency said.",
+  "source_name": "Utility Dive",
+  "source_url": "https://www.utilitydive.com/news/ferc-transalta-202c-cost-recovery-centralia/832001/",
+  "published_at": "2026-10-02",
+  "fetched_at": "2026-10-03",
+  "credibility": "B",
+  "query": "",
+  "quote_ready_en": "Only utilities in the Northwest should pay the nearly $20 million in expenses for a 90-day order covering the Centralia unit, and despite the unit’s lack of output, payment is due, the agency said.",
+  "quote_lint_ok": true,
+  "tags": [
+   "contract_award"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "076efb1b8d1c23c8",
+  "category": "market_supply",
+  "source_id": "utilitydive",
+  "title": "Senate permitting bill would expand federal role in transmission siting",
+  "summary_zh": "",
+  "summary_raw": "The legislation gives FERC authority to issue permits for transmission projects when it is in the public interest. It also eliminates NIETCs and the federal right of first refusal for incumbent utilities, and protects existing federal permits.",
+  "source_name": "Utility Dive",
+  "source_url": "https://www.utilitydive.com/news/senate-permitting-bill-would-expand-federal-role-in-electric-transmission-s/831886/",
+  "published_at": "2026-10-01",
+  "fetched_at": "2026-10-03",
+  "credibility": "B",
+  "query": "",
+  "quote_ready_en": "The legislation gives FERC authority to issue permits for transmission projects when it is in the public interest.",
+  "quote_lint_ok": true,
+  "tags": [
+   "grid_investment"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility"
+   ],
+   "product_line": [
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "e5057f0e10502f3d",
+  "category": "market_supply",
+  "source_id": "utilitydive",
+  "title": "Looking beyond peak: Industry coalition floats new approach to measuring grid utilization",
+  "summary_zh": "",
+  "summary_raw": "Current grid utilization should be viewed not as a problem, but as an opportunity to advance affordability and free up new capacity, writes Ian Magruder, executive director of Utilize Coalition.",
+  "source_name": "Utility Dive",
+  "source_url": "https://www.utilitydive.com/news/looking-beyond-peak-how-measure-grid-utilization/831533/",
+  "published_at": "2026-10-01",
+  "fetched_at": "2026-10-03",
+  "credibility": "B",
+  "query": "",
+  "quote_ready_en": "Current grid utilization should be viewed not as a problem, but as an opportunity to advance affordability and free up new capacity, writes Ian Magruder, executive director of Utilize Coalition.",
+  "quote_lint_ok": false,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self"
+  ],
+  "do_not_say_flags": [
+   "spam 词：free"
+  ],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "ed792185a04e298d",
+  "category": "market_supply",
+  "source_id": "utilitydive",
+  "title": "FERC chair slams PJM ‘mess’ as country’s largest grid operator delays power auction",
+  "summary_zh": "",
+  "summary_raw": "PJM had planned to accept offers for backstop power supplies from Sept. 30 through Oct. 21 after falling short of its reserve margin targets. But FERC only partially approved its plan, zeroing in on cost allocation concerns.",
+  "source_name": "Utility Dive",
+  "source_url": "https://www.utilitydive.com/news/pjm-delays-backstop-procurement-ferc-data-center/831751/",
+  "published_at": "2026-09-30",
+  "fetched_at": "2026-10-03",
+  "credibility": "B",
+  "query": "",
+  "quote_ready_en": "PJM had planned to accept offers for backstop power supplies from Sept.",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "75e83dfff7fd7d44",
+  "category": "market_supply",
+  "source_id": "eia",
+  "title": "Weekly average load in ERCOT continues near record high",
+  "summary_zh": "",
+  "summary_raw": "Sustained high temperatures have contributed to persistently high electricity demand in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization for most of the state.",
+  "source_name": "EIA Today in Energy",
+  "source_url": "https://www.eia.gov/todayinenergy/detail.php?id=68084",
+  "published_at": "2026-09-03",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "",
+  "quote_ready_en": "Sustained high temperatures have contributed to persistently high electricity demand in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization for most of the state.",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "e5d0e23eb944e6b7",
+  "category": "market_supply",
+  "source_id": "eia",
+  "title": "Hourly peak load in ERCOT set a new record, exceeding 91 GW on July 22",
+  "summary_zh": "",
+  "summary_raw": "Hourly peak load in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization serving most of Texas, reached a record 91.1 gigawatts (GW) on July 22, 2026, according to data reported to us for our Hourly Electric Grid Monitor.",
+  "source_name": "EIA Today in Energy",
+  "source_url": "https://www.eia.gov/todayinenergy/detail.php?id=67906",
+  "published_at": "2026-08-03",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "",
+  "quote_ready_en": "Hourly peak load in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization serving most of Texas, reached a record 91.1 gigawatts (GW) on July 22, 2026, according to data reported to us for our Hourly...",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "bb877c16579dd2c4",
+  "category": "standards_cert",
+  "source_id": "fedreg",
+  "title": "Energy Conservation Program: Energy Conservation Standards for Distribution Transformers",
+  "summary_zh": "",
+  "summary_raw": "[Proposed Rule · Energy Department] A Presidential determination issued on April 20, 2026, found that grid infrastructure supply chains, including distribution transformers and electrical core steel, are essential to national defense, and that U.S. industry faces critical constraints from limited domestic product capacity, extended procurement timelines, and foreign supply dependence. The U.S. Department of Energy (\"DOE\") is initiating an information and data gathering effort to understand how t",
+  "source_name": "Federal Register",
+  "source_url": "https://www.federalregister.gov/documents/2026/06/15/2026-11971/energy-conservation-program-energy-conservation-standards-for-distribution-transformers",
+  "published_at": "2026-06-15",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"distribution transformer\"",
+  "quote_ready_en": "[Proposed Rule · Energy Department] A Presidential determination issued on April 20, 2026, found that grid infrastructure supply chains, including distribution transformers and electrical core steel, are essential to national defense,...",
+  "quote_lint_ok": true,
+  "tags": [
+   "lead_time",
+   "standards",
+   "DOE",
+   "regulation",
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "ed73ba04c820a320",
+  "category": "standards_cert",
+  "source_id": "fedreg",
+  "title": "National Environmental Policy Act Implementing Procedures",
+  "summary_zh": "",
+  "summary_raw": "[Rule · Postal Service] The United States Postal Service (USPS) is publishing this interim final rule with request for comments to partially rescind and update its remaining National Environmental Policy Act (NEPA) implementing procedures, which were promulgated to implement the now- rescinded Council on Environmental Quality (CEQ) regulations.",
+  "source_name": "Federal Register",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/25/2026-19720/national-environmental-policy-act-implementing-procedures",
+  "published_at": "2026-09-25",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "energy conservation standards transformer",
+  "quote_ready_en": "[Rule · Postal Service] The United States Postal Service (USPS) is publishing this interim final rule with request for comments to partially rescind and update its remaining National Environmental Policy Act (NEPA) implementing...",
+  "quote_lint_ok": true,
+  "tags": [
+   "regulation"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "2c19ef0105e9f8f2",
+  "category": "standards_cert",
+  "source_id": "fedreg",
+  "title": "Energy Conservation Program: Procedures, Interpretations, and Policies for Consideration of New or Revised Energy Conservation Standards and Test Procedures for Consumer Products and Certain Commercial/Industrial Equipment",
+  "summary_zh": "",
+  "summary_raw": "[Proposed Rule · Energy Department] The U.S. Department of Energy (\"DOE\" or \"the Department\") proposes to update the Department's current rulemaking methodology titled, \"Procedures, Interpretations, and Policies for Consideration of New or Revised Energy Conservation Standards and Test Procedures for Consumer Products and Certain Commercial/Industrial Equipment\" (\"Process Rule\"). Specifically, DOE proposes to: make Appendix A binding on DOE for certain actions; amend objectives and consideration",
+  "source_name": "Federal Register",
+  "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13674/energy-conservation-program-procedures-interpretations-and-policies-for-consideration-of-new-or",
+  "published_at": "2026-07-07",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "energy conservation standards transformer",
+  "quote_ready_en": "[Proposed Rule · Energy Department] The U.S.",
+  "quote_lint_ok": true,
+  "tags": [
+   "standards",
+   "DOE",
+   "regulation",
+   "contract_award"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "301b204c6416bf57",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "Wetour Robotics Ltd  (WETO)  (CIK 0001941158) — 6-K",
+  "summary_zh": "",
+  "summary_raw": "Wetour Robotics Ltd  (WETO)  (CIK 0001941158) filed 6-K (EX-99.1).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1941158/000121390026101470/ea030594101ex99-1.htm",
+  "published_at": "2026-09-18",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "Wetour Robotics Ltd  (WETO)  (CIK 0001941158) filed 6-K (EX-99.1).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "bc9fbafa454846be",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "SYNAPTICS Inc  (SYNA)  (CIK 0000817720) — 425",
+  "summary_zh": "",
+  "summary_raw": "SYNAPTICS Inc  (SYNA)  (CIK 0000817720) filed 425 (425).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/817720/000114036126036771/ef20081954_425.htm",
+  "published_at": "2026-09-16",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "SYNAPTICS Inc  (SYNA)  (CIK 0000817720) filed 425 (425).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "aec53ccacc8a84ba",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "Aperture AC  (APUR, APURR)  (CIK 0002093524) — 425",
+  "summary_zh": "",
+  "summary_raw": "Aperture AC  (APUR, APURR)  (CIK 0002093524) filed 425 (EX-99.2).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2093524/000121390026104882/ea030716601ex99-2.htm",
+  "published_at": "2026-09-30",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "Aperture AC  (APUR, APURR)  (CIK 0002093524) filed 425 (EX-99.2).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "54432857b93d873f",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "Aperture AC  (APUR, APURR)  (CIK 0002093524) — 8-K",
+  "summary_zh": "",
+  "summary_raw": "Aperture AC  (APUR, APURR)  (CIK 0002093524) filed 8-K (EX-99.2).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2093524/000121390026104880/ea030716601ex99-2.htm",
+  "published_at": "2026-09-30",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "Aperture AC  (APUR, APURR)  (CIK 0002093524) filed 8-K (EX-99.2).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "e3b74a53313d51df",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "Navitas Semiconductor Corp  (NVTS)  (CIK 0001821769) — 8-K",
+  "summary_zh": "",
+  "summary_raw": "Navitas Semiconductor Corp  (NVTS)  (CIK 0001821769) filed 8-K (EX-99.2).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1821769/000110465926100478/tm2623854d1_ex99-2.htm",
+  "published_at": "2026-08-25",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "Navitas Semiconductor Corp  (NVTS)  (CIK 0001821769) filed 8-K (EX-99.2).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "943091dddc7aa726",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "Forgent Power Solutions, Inc.  (FPS)  (CIK 0002080126) — 10-K",
+  "summary_zh": "",
+  "summary_raw": "Forgent Power Solutions, Inc.  (FPS)  (CIK 0002080126) filed 10-K (EX-21).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/ex211-listofsubsidiariesof.htm",
+  "published_at": "2026-09-15",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "Forgent Power Solutions, Inc.  (FPS)  (CIK 0002080126) filed 10-K (EX-21).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "964b795a1394b7c7",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "Hydro One Ltd  (HRNNF, HYNLY)  (CIK 0001712356) — 6-K",
+  "summary_zh": "",
+  "summary_raw": "Hydro One Ltd  (HRNNF, HYNLY)  (CIK 0001712356) filed 6-K (EX-99.1).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1712356/000119312526389452/d28931dex991.htm",
+  "published_at": "2026-09-14",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "Hydro One Ltd  (HRNNF, HYNLY)  (CIK 0001712356) filed 6-K (EX-99.1).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "597306fd9e14b869",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "HYDRO ONE INC  (CIK 0001114445) — 6-K",
+  "summary_zh": "",
+  "summary_raw": "HYDRO ONE INC  (CIK 0001114445) filed 6-K (EX-99.1).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1114445/000119312526389449/d28931dex991.htm",
+  "published_at": "2026-09-14",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "HYDRO ONE INC  (CIK 0001114445) filed 6-K (EX-99.1).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "670b522be88bfcd2",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "Forgent Power Solutions, Inc.  (FPS)  (CIK 0002080126) — 8-K",
+  "summary_zh": "",
+  "summary_raw": "Forgent Power Solutions, Inc.  (FPS)  (CIK 0002080126) filed 8-K (EX-99.1).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000034/exhibit991earningsrelease_.htm",
+  "published_at": "2026-09-15",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "Forgent Power Solutions, Inc.  (FPS)  (CIK 0002080126) filed 8-K (EX-99.1).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "92868343f1d7cacc",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "APPLIED OPTOELECTRONICS, INC.  (AAOI)  (CIK 0001158114) — 8-K",
+  "summary_zh": "",
+  "summary_raw": "APPLIED OPTOELECTRONICS, INC.  (AAOI)  (CIK 0001158114) filed 8-K (EX-10.1).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007160/aaoi_ex1001.htm",
+  "published_at": "2026-09-15",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "APPLIED OPTOELECTRONICS, INC.  (AAOI)  (CIK 0001158114) filed 8-K (EX-10.1).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "0f7fafc097d7724e",
+  "category": "customer_activity",
+  "source_id": "edgar",
+  "title": "Bitzero Holdings Inc.  (AIBZ)  (CIK 0002100457) — 6-K",
+  "summary_zh": "",
+  "summary_raw": "Bitzero Holdings Inc.  (AIBZ)  (CIK 0002100457) filed 6-K (EX-99.5).",
+  "source_name": "SEC EDGAR Full-Text Search",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2100457/000175392626001741/g085940_ex99-5.htm",
+  "published_at": "2026-09-10",
+  "fetched_at": "2026-10-03",
+  "credibility": "A",
+  "query": "\"transformer\"",
+  "quote_ready_en": "Bitzero Holdings Inc.  (AIBZ)  (CIK 0002100457) filed 6-K (EX-99.5).",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "22e17ca41460814d",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "US transformer lead times remain 2–3 years",
+  "summary_zh": "",
+  "summary_raw": "US transformer lead times remain 2–3 years Transformer Magazine",
+  "source_name": "Transformer Magazine",
+  "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSTNmVFB0SGFmbTQ0Y21VZmEtcDlxcXRLMGlDaUVrUDRUZmpqRmgya2pFMFlFZDVIUXdvYkR2QVhhdUZnem82bTRmaEtLTnZOeHJNZzYzSmhfdEYzWXA2NXc1Ukd1eXhQZXZ1bzhGU1NIdTRpeHV0NHlQaFFoOFhfbFlUemJVZUtG?oc=5",
+  "published_at": "2026-09-08",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer lead time",
+  "quote_ready_en": "US transformer lead times remain 2–3 years Transformer Magazine",
+  "quote_lint_ok": true,
+  "tags": [
+   "lead_time"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self"
+  ],
+  "do_not_say_flags": [
+   "含交期/价格语义 —— 不可用于跟进信正文，仅作背景"
+  ],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "3f82f19cbee7fdeb",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "Distribution Transformers",
+  "summary_zh": "",
+  "summary_raw": "Distribution Transformers Department of Energy (.gov)",
+  "source_name": "Department of Energy (.gov)",
+  "source_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ENUREY3FOeVlRcEdGWkZFMjh4RmVDc1JobzhaVDdYa1BaX29uT2wteFVpcS1ZVHRBc2o4eXY3MlpKSWJBYXBPUmpfdHA5WEY1bTdTQnVjTnFYTXdpam8wMw?oc=5",
+  "published_at": "2026-09-30",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer supply shortage",
+  "quote_ready_en": "Distribution Transformers Department of Energy (.gov)",
+  "quote_lint_ok": true,
+  "tags": [
+   "DOE"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "cc813de6b1e2f41a",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "The transformer supercycle: Why demand is outrunning supply",
+  "summary_zh": "",
+  "summary_raw": "The transformer supercycle: Why demand is outrunning supply McKinsey & Company",
+  "source_name": "McKinsey & Company",
+  "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOa0VBXzRXcmJJRmNiS3pzVjFtMUV3b0Q1VWdmSUdMY1NPY29lbmx2N2pKU3ZaMWI5YnU5TUZNSWR5dEFxOFREaTAwbzVfeVpSaDZ6dDUwaGNQZ1NqVzhWMk1xbHBxczd0S2FaZWNnVUxwbGpJVEpDdmRsNEdyOUI3VS1IVWF5dWhpRnhRU3V3R1ZjUGZlLS10ZHdabEtxWDluN3E5OUZ1dHZXVFEtN2ljTzgzNHF5bUVrMlhtWHN6MWUwWDg2R1RLZ3lsUjVDWEVCRzB6Yw?oc=5",
+  "published_at": "2026-09-18",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer supply shortage",
+  "quote_ready_en": "The transformer supercycle: Why demand is outrunning supply McKinsey & Company",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "1a33a6d1179572b6",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "Trillion-Level Computing Power Faces Critical Bottleneck from a Single Tantalum Capacitor",
+  "summary_zh": "",
+  "summary_raw": "Trillion-Level Computing Power Faces Critical Bottleneck from a Single Tantalum Capacitor 36Kr",
+  "source_name": "36Kr",
+  "source_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBGendvdDQtWml1T3pOci1vNTYxWWwtZkE4OEpWNl9qWGsyQUR0a3g4RFc5QU9MZkhEYTRfeUJ3RDEzQXhFRkg1NGVtM2toekxyRHBZ?oc=5",
+  "published_at": "2026-09-20",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer supply shortage",
+  "quote_ready_en": "Trillion-Level Computing Power Faces Critical Bottleneck from a Single Tantalum Capacitor 36Kr",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "9072d17699c8e72e",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "Hitachi deepens commitment to U.S. manufacturing with $528 million Mississippi transformer factory",
+  "summary_zh": "",
+  "summary_raw": "Hitachi deepens commitment to U.S. manufacturing with $528 million Mississippi transformer factory Hitachi Energy",
+  "source_name": "Hitachi Energy",
+  "source_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOejVvX2prbmMzeEphQTdHQ0NyN2VRa0RKdmRWWFpsT3g5Y2RsM0VwU2xKUy1kRk9ZOVB2WXNJLTRocmZ6dXRoU2ZubjQxRTFSX2h2amRRVXZ2dFhaUXl4M3pGV29zcTh2OFV1QWJSOWZHMTBkTkJCMGdEcURlczNXVDZxZnhyWHQ3N3ZURjVPMzFweVJXczFSRzBTeG1UN1RSYTZhM2stM3BrSUdaVkdBbEdmaDl3MTRUNWtEN0s0VllaTGp2NUZzaDhXV0JfaWNsMDFhZmNIU2lrcnB3SDZZVzU2aE1NeVNLdmpGSW9oR3NTN19EOU55aQ?oc=5",
+  "published_at": "2026-09-15",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "power transformer grid investment",
+  "quote_ready_en": "Hitachi deepens commitment to U.S.",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "773643954cdbd55b",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "Europe can't afford more costly electricity infrastructure",
+  "summary_zh": "",
+  "summary_raw": "Europe can't afford more costly electricity infrastructure Enlit World",
+  "source_name": "Enlit World",
+  "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQeXhOWDNoNGt3TG5GSS1tNnJZa0xPMjZHN2ExbV9PODg5VVhfTTRGczBUekNveUxMOVh3Uk1ZdFE0cVljMWVIR1NQR3NpM2ZlTnF0ZHA3NWlpaUkwU09ENmxJTERwUDlUTUVEWVFkQTNyQmxVNl95aGRDclNreW5jT2VsdFFwQXBYbm5FVXVlS2Z3VmdmekE?oc=5",
+  "published_at": "2026-09-18",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "power transformer grid investment",
+  "quote_ready_en": "Europe can't afford more costly electricity infrastructure Enlit World",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self"
+  ],
+  "do_not_say_flags": [
+   "含交期/价格语义 —— 不可用于跟进信正文，仅作背景"
+  ],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "1b028ac790fc45ad",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "America’s Power Buildout Is Accelerating. These 3 ETFs Invest in the Infrastructure",
+  "summary_zh": "",
+  "summary_raw": "America’s Power Buildout Is Accelerating. These 3 ETFs Invest in the Infrastructure 24/7 Wall St.",
+  "source_name": "24/7 Wall St.",
+  "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPM1NkbFVkRl9Samp4MUFPVE9xWVZRMGhCV0F0SFhYd1d2YmVxQ1EyeGZBUzI0T0ljR0EyVGtrVU95QU1MVDZhSHVaaDhkclpjX2dsR1dpMXpQaDFMYW1kMmRuZlpfTldURlpET2U1cjZxbmMweDZsS2E3eXpDU0YwZkNEOE1kX2VCTHpmVEN4T3lDQ3F5cWotTURHZUZ3azZyMmgzOHVnc01vMU5YT001WlROdXBHU2RQdDJWaUYtYmhvMUhEVGVsag?oc=5",
+  "published_at": "2026-09-22",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "power transformer grid investment",
+  "quote_ready_en": "America’s Power Buildout Is Accelerating.",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "42bd66fb8d6e440e",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "Hitachi Energy To Invest $528 Million In Mississippi Transformer Factory And Create More Than 700 Jobs",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy To Invest $528 Million In Mississippi Transformer Factory And Create More Than 700 Jobs Pulse 2.0",
+  "source_name": "Pulse 2.0",
+  "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOeWlXQkFJZ2xNRTZfaTlXWG5uVGVBcTlINEJFY014VElWQjVrU2oyc2dVc1A5bXJmLU16b2dER2xidm1qbGQ4aTRHamU5cjhVTkpxODVWOTJXaUUzbncxMTB3djNlYWJTajhUbnd6a01ZUGFlU0NyRXRkWVBCdUFseU43MEl4UW05TXVWZUdEWE1BeS1VZU9OcXkxLVd6b2RYVGNESnNLNllzWk5kMGhDN0VOVFZINktWZVdsRzRR0gHDAUFVX3lxTFBYam50ODRaeTEtYjNjV1QzVHBtb2IyZzhrRElxVE1RajZCNVFFYTFEODZfSjZTZTRRRURTSG1VVDY3NUlWR2ZLaGZoZmhXVUpvVFhGSzI4dkNRRkd4cXlXcTB4TDNuRlNNR25OSl8wOUNpaWcxRGFtbEJEQV90UXRScVROZW0wUTNzWldZMGtiNWtQV0d5dHBnVzlsdWw5MjV1RGRnWFoxVWpPOVk4bXVPUWswbmVaV0NYa1lvWWxjNVVjSQ?oc=5",
+  "published_at": "2026-09-21",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "power transformer grid investment",
+  "quote_ready_en": "Hitachi Energy To Invest $528 Million In Mississippi Transformer Factory And Create More Than 700 Jobs Pulse 2.0",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "328037150e332f13",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "$528M, 650 jobs: Japan and Mississippi seal a power-grid deal at the G20 in Houston.",
+  "summary_zh": "",
+  "summary_raw": "$528M, 650 jobs: Japan and Mississippi seal a power-grid deal at the G20 in Houston. Latin Times",
+  "source_name": "Latin Times",
+  "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNanRIcmVkZGhiYXVJVFFjLWxFWVdwb05MZWpuR0RsbVlRTkNLM0NEWnJ3LXJyV1lpdkNlaUc2M1dXVjJtbTdJOUUxcFJxZlZnYjUtRkExdW5FLTVfZW1SYlFXVkRfNVBjaExvU19WVC0zdy02WGs2S2xaZ3ZmdXc0dkI2Q0pGVGpfdUlCYUUxeUlqeHVwOVBoZkZCVmlWRGZuM0p1TG5YeS1yNTNoZVZLb3UxeUlCZlZ6d2VjOQ?oc=5",
+  "published_at": "2026-09-15",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "power transformer grid investment",
+  "quote_ready_en": "$528M, 650 jobs: Japan and Mississippi seal a power-grid deal at the G20 in Houston.",
+  "quote_lint_ok": true,
+  "tags": [
+   "contract_award"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "ce9798d3afc89365",
+  "category": "market_supply",
+  "source_id": "gnews_market",
+  "title": "Manufacturers expand U.S. operations to meet unrelenting grid demand",
+  "summary_zh": "",
+  "summary_raw": "Manufacturers expand U.S. operations to meet unrelenting grid demand Renewable Energy World",
+  "source_name": "Renewable Energy World",
+  "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZ19ieFNoY0ZyXzFMdXBUUFZUWmhNSlJnVHRkN1NiejdlRmIwVENFTk0wOUNHTnl6bFk5QlZucmhLMUFYTmRBUktkTmhaM0NZMEVtT0ZERG9VcGFkZTRLWFlOcXRwdm5nZHRZa0RlTDBBMWZ3Z01qdlBvY21NZzVPMnBtbERna09ZNFNoem1Kc041LWNDaW1saWtCVTU3UzZXVTZMODVueUNZZjl6WHE1QVlYdS0xeFE?oc=5",
+  "published_at": "2026-09-03",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "power transformer grid investment",
+  "quote_ready_en": "Manufacturers expand U.S. operations to meet unrelenting grid demand Renewable Energy World",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "89bb3b3e43f4dd77",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hammond Power Adds to Transformer Manufacturing Capacity",
+  "summary_zh": "",
+  "summary_raw": "Hammond Power Adds to Transformer Manufacturing Capacity Advanced Manufacturing",
+  "source_name": "Advanced Manufacturing",
+  "source_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNbTZYWFBqWFBhR0lrdWlidk4wendMV0JlNmJ6MFpTTW5JdTh4R01kNzl0YUlEa04zUjhyNGRVSGJhZ1RoSmtNdFNoZWtzb1Bmc3JOTE4yMnNCVF94c3YyOUNqM2FDVWhPX2QxUVcwVzJuSVJsS3c4NW9zUWx2SFFaeDVpTHFjb3FSRmE5SlVCeFo5eml0dHFxRXg1Z1Q0MkRhUXBTa0lwWWxXYU9hdVdjRkM3Mmx1dkRwdlVIOXhQTVpYc3dpR2NRLVNRSXFhMV9MX3NUWlRyMDdCYjk3LXFzdFBtemYwalpfS0E?oc=5",
+  "published_at": "2026-09-28",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer manufacturer capacity",
+  "quote_ready_en": "Hammond Power Adds to Transformer Manufacturing Capacity Advanced Manufacturing",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "1deb3ec65eda8be2",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi to double US production of small and medium-sized power transformers",
+  "summary_zh": "",
+  "summary_raw": "Hitachi to double US production of small and medium-sized power transformers Utility Dive",
+  "source_name": "Utility Dive",
+  "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPckRCZUVqT3l1N25za243Qk5xbXNRN2tKVmwxNUhKX05UcmpjakFWclVfNVRoWXMxdGN3Tzg1YUtWbGVGX0QteHA3ek1pa2JOZWx4Sk1tU0VvMF9qbWNSWVB4R2pqWHFibE82anFHZ0pIZGl1NmtoekFNeGZsaHI0T05OT1k2U1lwamJ1S1lmQWlNTldOWU1FNHFEdXNaeDkyT3RMVXN6bjlEZzc1Mmk0N2h2ZTJNMmM?oc=5",
+  "published_at": "2026-09-18",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer manufacturer capacity",
+  "quote_ready_en": "Hitachi to double US production of small and medium-sized power transformers Utility Dive",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility"
+   ],
+   "product_line": [
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "5b3873e8e038b204",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi Energy commits $528 million for Mississippi transformer factory",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy commits $528 million for Mississippi transformer factory pv magazine USA",
+  "source_name": "pv magazine USA",
+  "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQN0x5amNFNlRjMGNRMjdQZmhNQ3AxTEpsbjdQR3BLa1k1ZkFhcU82cHdYM1o3ZkQ3VHd2bERHMUVLODQxa0NhR0ZPVmpFWF9SR0d1djktSm1xQ0wwS20xYnctMFhNVUJjU0NKZU5YTTFXNkdsZHoyQjVOSnJWTjFNQUQtcXZkMFVtSDBxUkxQZXFjMHdldzk0YjRoc2NTd0hCVUd2bk5kYU13V1NRRmRF?oc=5",
+  "published_at": "2026-09-17",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer manufacturer capacity",
+  "quote_ready_en": "Hitachi Energy commits $528 million for Mississippi transformer factory pv magazine USA",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "f83b1599b20b1762",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi Energy brings largest U.S. investment to date to Mississippi",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy brings largest U.S. investment to date to Mississippi Magnolia Tribune",
+  "source_name": "Magnolia Tribune",
+  "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUjBhaTVoVUtYaUNjRlpfbi1uLVV4aFVNYkF2dzluOUFWNG9sREpfTDNYNFVqX1RiYTNsWVpidm81MjN1OGVTQzdLemMxNWhZM0tySjVUNG96M01ZODUyUFNPb0dtSXdJbVBqWEU3MFlydVZ2ejd4ZVhjY1pQMlRGYXh1Q1pyMjNnYnZScnRwbWdmaWNRUENEOV9RN0kyRzJrZjlRdndObXV4dFE?oc=5",
+  "published_at": "2026-09-15",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer manufacturer capacity",
+  "quote_ready_en": "Hitachi Energy brings largest U.S.",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "da6d75632192ea3f",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi Energy to invest $528 million in new transformer factory in Mississippi",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy to invest $528 million in new transformer factory in Mississippi アラブニュース",
+  "source_name": "アラブニュース",
+  "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMzdTTnZFcU9WYXoyOTJjNzVwQk5rcmZjdmNNVDNqYWpWeHg2eW9Vb0wxNVR6NDJIX29scC1ObzZKNzh1OXZxYmR0SkZWZzBfa0ZBN2NOU28zdnI0VHRkUmtFa3Q2VkZrcXRYeG5Kdkh0cXJvUkFHcnhJYy1xOEk5RVRsLUxNUkFVSk1EQkt0VFRRVUp5ZURveGFtYndtU055ZGwwcFVFZzRYamFaYmFJNmJUNVAwaW9QLVBqRjR2UQ?oc=5",
+  "published_at": "2026-09-16",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer manufacturer capacity",
+  "quote_ready_en": "Hitachi Energy to invest $528 million in new transformer factory in Mississippi アラブニュース",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "ac85b8af9fd5a479",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi Energy to Build New Transformer Plant in Mississippi with ¥82 Billion Investment, Doubling Production Capacity",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy to Build New Transformer Plant in Mississippi with ¥82 Billion Investment, Doubling Production Capacity finance.biggo.com",
+  "source_name": "finance.biggo.com",
+  "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBKUGFTV1I1dnI4SFdWYnFfbkJYZjJaeVZhX1FjUW1NcXROM2s3WWh4bHVWbnRLODNvdWo0MDJNRDFSQUl2cDlkNm1DUU14b3dPZV9HemUxdzB3MElhZmpkdEw3LWsyNlpVRGFaUHd0SDVFNXJQZlE?oc=5",
+  "published_at": "2026-09-16",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "transformer manufacturer capacity",
+  "quote_ready_en": "Hitachi Energy to Build New Transformer Plant in Mississippi with ¥82 Billion Investment, Doubling Production Capacity finance.biggo.com",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "9c1ef4ddd5fc5e21",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi Energy to Build Mississippi Transformer Factory",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy to Build Mississippi Transformer Factory Advanced Manufacturing",
+  "source_name": "Advanced Manufacturing",
+  "source_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOV3NQWUZwV3VUbXN2TW9TT1Jsa3VtSm94d1lDMnhSc2pmaklvbjRnR0taX2g5STUzMElXckJ5OFk4Mk1OcU94aERKT0RQaFFmbmlFZWZwcTNneVYwNTJLYWRfM3BvUF9WWlVPbjdZLS1DbHJKeW1RZjk5aUlQVDJLNWV6anhHNXBVOXo0ajRpSlBNa0FnUVp1M3owZGMyQlg4MGFMWkZ2ZUVoUUozUlVkeG9Wa0Q2YjdJVVo3bHNYRlNaRlY3algtdG4zQW1uQndnVVBMbG1mTTYzeG4yUU5YRFlubFhEM0Nu?oc=5",
+  "published_at": "2026-09-24",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "Hitachi Energy transformer",
+  "quote_ready_en": "Hitachi Energy to Build Mississippi Transformer Factory Advanced Manufacturing",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "bfaf24e334f2a260",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi Energy and Enedis sign $398 M transformer deal",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy and Enedis sign $398 M transformer deal Transformer Magazine",
+  "source_name": "Transformer Magazine",
+  "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSW5MV3M2ZnJRRzlXMWx6eGtjUERUUWwzSWJWRk1RSFgtSWdveTVGZ1ZSYU93cHk5aVdMMXY1NHE4U0pSQ3pVcFE4MWo5anczZkVUaFpvWmUzeEU4UmhHT0JVaHFMOGZEOHNHWU1OZHMtOUNEMGM2aGpuTnBNUFRYSjFjRXA5bl84VXdUN1h1TndrM3djeEI0?oc=5",
+  "published_at": "2026-09-28",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "Hitachi Energy transformer",
+  "quote_ready_en": "Hitachi Energy and Enedis sign $398 M transformer deal Transformer Magazine",
+  "quote_lint_ok": true,
+  "tags": [
+   "contract_award"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "dacf00d56082bd68",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi Energy plans $528m transformer plant in Mississippi, US",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy plans $528m transformer plant in Mississippi, US Yahoo Finance",
+  "source_name": "Yahoo Finance",
+  "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPejdDNENISkxiMnVWa1JYWjJ4RWNlS0RHV1ZqY2VfSk1mU0JCMEJLMXVBZjByVzdtbE9iWGlSYXVfdmNIUjRwbGF2WldXZkk0VU1iYVRNOEJPaVZkRTBFYmJyU2pyOXNXVEkxdTVMLXZJY1plNExhOUFhUWN5QVU5a1N2YzRNYVhiSEV1dGRBQkdkSzVXMDN3bzZR?oc=5",
+  "published_at": "2026-09-16",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "Hitachi Energy transformer",
+  "quote_ready_en": "Hitachi Energy plans $528m transformer plant in Mississippi, US Yahoo Finance",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "9471884627d57b95",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Hitachi Energy Commits $528M to Expand Mississippi Transformer Operations",
+  "summary_zh": "",
+  "summary_raw": "Hitachi Energy Commits $528M to Expand Mississippi Transformer Operations Industrial Equipment News",
+  "source_name": "Industrial Equipment News",
+  "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZHRVdDh4SVQzck9MRXFVeUx5VUE3LUQzQzdzbmtrTDB6aUVIMWtocDd6N2M5c21FMXYxQjlybG1XcElBdUFsMUVab0JKVnozbUtPenVvYnRRVDllU2xyVWNWdkpaa0QwTlp4SElNMDRkbXVSTTJ2Z1ZCeFpvLXNMeEE2T1NudnNHZXZEalF0NkR6Qk1xRkp3SEdsR01wMnVrdXEyR0g0SG1OVlNuX3NfcFJVa3dzRzVs?oc=5",
+  "published_at": "2026-09-16",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "Hitachi Energy transformer",
+  "quote_ready_en": "Hitachi Energy Commits $528M to Expand Mississippi Transformer Operations Industrial Equipment News",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "9fb8c14f90f283e6",
+  "category": "competitor",
+  "source_id": "gnews_competitor",
+  "title": "Trump administration helps announce Hitachi Energy plans for $528M transformer factory in Copiah County",
+  "summary_zh": "",
+  "summary_raw": "Trump administration helps announce Hitachi Energy plans for $528M transformer factory in Copiah County News From The States",
+  "source_name": "News From The States",
+  "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQOVgyMWIxLWMxMWFfZmd1aTRmVHlQSEwzUjJLdTZSWE5ydHpldXlobE1BajNGWHppV0VlNEprVk5jckdONXViVlpvODlUUVlJeWFXbXZaUmFkek9uZExfeF8tYXVXMlhiYmg2RldwaXpYZnpEcDhPZ0ZpeW51MTN1QTFtTVRhS2FOWWpCRl8ycnF1czJ6X0U5cFA5bUFmSmR2d0NsRGFROEVaN09BRXdXYks3QkVrYVVfbDY2bjJqc2FDOUdEZUQtRWhR?oc=5",
+  "published_at": "2026-09-15",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "Hitachi Energy transformer",
+  "quote_ready_en": "Trump administration helps announce Hitachi Energy plans for $528M transformer factory in Copiah County News From The States",
+  "quote_lint_ok": true,
+  "tags": [
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "8a9897dbc7a48d14",
+  "category": "customer_activity",
+  "source_id": "gnews_customer",
+  "title": "ELECTRIC GRID PROJECTS",
+  "summary_zh": "",
+  "summary_raw": "ELECTRIC GRID PROJECTS Department of Energy (.gov)",
+  "source_name": "Department of Energy (.gov)",
+  "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE85TlBXa3NIREw1cE9DcVlsMERadUdoTmNZOWRMQkZuSldZQzk1UC00OXRaU2NyaU1QZXgwM1dxWHNUNUJkcWpwVEh3SWJQV2MtVVBYeDY3U2ltU2ZBUEE?oc=5",
+  "published_at": "2026-09-24",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "electric utility grid expansion project",
+  "quote_ready_en": "ELECTRIC GRID PROJECTS Department of Energy (.gov)",
+  "quote_lint_ok": true,
+  "tags": [
+   "DOE"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "c4dd946fd9b19b49",
+  "category": "customer_activity",
+  "source_id": "gnews_customer",
+  "title": "South Africa Delays Power-Grid Expansion Plan by Six Months",
+  "summary_zh": "",
+  "summary_raw": "South Africa Delays Power-Grid Expansion Plan by Six Months Bloomberg.com",
+  "source_name": "Bloomberg.com",
+  "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQbFZuRGRTQkxNNVNaTE85X21aM1VpQVA1c1J6bU5kNGVzcWQ2QmdiWWc3ckRSNVRKcXBkRmpxMGVoMEJNcW82NDdXdGhHQjVOWWtCbmJoNnh4Z09QaEk5QnI1YjIyUTZteElfM0czNTExV3puZ0paOW5TaWl6cFpQdnlsaGdGX2Q4bEUwcVJNRVRUOWJBem5aRVMxRDRzSVVZX045ejM3Yl83eVFPTTJ3?oc=5",
+  "published_at": "2026-10-02",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "electric utility grid expansion project",
+  "quote_ready_en": "South Africa Delays Power-Grid Expansion Plan by Six Months Bloomberg.com",
+  "quote_lint_ok": true,
+  "tags": [
+   "grid_investment",
+   "standards",
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self"
+  ],
+  "do_not_say_flags": [
+   "含交期/价格语义 —— 不可用于跟进信正文，仅作背景"
+  ],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "6120bb15c65081ab",
+  "category": "customer_activity",
+  "source_id": "gnews_customer",
+  "title": "Clean Energy Resources to Meet Data Center Electricity Demand",
+  "summary_zh": "",
+  "summary_raw": "Clean Energy Resources to Meet Data Center Electricity Demand Department of Energy (.gov)",
+  "source_name": "Department of Energy (.gov)",
+  "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNS3BpVTdBYWozS0QzbFdJakhBcUltUHd6T3RDQ0ZJZ3VYZjFNejEwWlR6MUlLdklGdlMycXpQbkhGcHBXRVFiVDhSQ3J1dWdJT0RxT3AzdXhnRFlWcEJUdzA1Vzdmb3cwbGQ0eWR6aWVUWTNuYlc3Y3BuUzRiRHVwOEdrN0dkUnIzQW9tYQ?oc=5",
+  "published_at": "2026-09-30",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "electric utility grid expansion project",
+  "quote_ready_en": "Clean Energy Resources to Meet Data Center Electricity Demand Department of Energy (.gov)",
+  "quote_lint_ok": true,
+  "tags": [
+   "data_center",
+   "DOE"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "datacenter"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "2c11f5c56db9616d",
+  "category": "customer_activity",
+  "source_id": "gnews_customer",
+  "title": "Iljin Electric Wins Additional $137.2 Million Order in UK — Largest Single Cable Project in Company History",
+  "summary_zh": "",
+  "summary_raw": "Iljin Electric Wins Additional $137.2 Million Order in UK — Largest Single Cable Project in Company History finance.biggo.com",
+  "source_name": "finance.biggo.com",
+  "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5QUlcxbmdMLTVkZ0lySEZsMURMLUtqWmlsNDlhUW82ZUpqS0RIT3E1SUJWNnEtbmtNRzdhVm5IenhocXlONllUc0M1c3JCVnVMVmNEcndQU0lsMUVHYnhoSEhWT1k1dnFOVUVWSm1UR2M2TW5VNVE?oc=5",
+  "published_at": "2026-10-02",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "electric utility grid expansion project",
+  "quote_ready_en": "Iljin Electric Wins Additional $137.2 Million Order in UK — Largest Single Cable Project in Company History finance.biggo.com",
+  "quote_lint_ok": true,
+  "tags": [
+   "contract_award"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "932dd00fa8213b72",
+  "category": "customer_activity",
+  "source_id": "gnews_customer",
+  "title": "Britain Faces 150 Billion Grid Overhaul to Power Renewable Energy Boom",
+  "summary_zh": "",
+  "summary_raw": "Britain Faces 150 Billion Grid Overhaul to Power Renewable Energy Boom Crude Oil Prices Today | OilPrice.com",
+  "source_name": "Crude Oil Prices Today | OilPrice.com",
+  "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRktoekZESlprY19qUEUzU0szM2hTamkzSXY0ckktUUE3Wl9vZGNHd05fQlhxMUZlNHFGODBLZV8tRUt1OFFkc1BVcG9iYmtZSV83NW16RHhQSklhei1DdFlFaktJdDlQSFRjM1E3dUwwU3BPZjV0QXhtTnNvX3dobE1vMmVyQWhnZWJWN3UzOFBMZmwwTDlZa0Vib0lhcUZPUzg5ZkNVdkw2TE5CbmRIMURjV09TQWtHOFHSAb8BQVVfeXFMTUlINGlhWU9fSmlyc0Z4MmZNQlBNZkZWNEVPV3otMnJGR1RTTVl3RzJUYWZKWGNoU0pTNmVoTnQzeG5ORkJTdnpIMkIyOHJaTHppTGJWZjBkdDJsRENXUnp0Wi1uU3BRaF9uSjhiQUF3S0RPazdtVUh1SlhGdUZVNm8wd0J0ZFlhcEhoREpwWjdDTVNWQ0o3ckgxWmt1a0FId1phUzRPdzZ4TktSZ2Y1MlVRM2VHZ2tRQUMxZENyUVE?oc=5",
+  "published_at": "2026-09-19",
+  "fetched_at": "2026-10-03",
+  "credibility": "C",
+  "query": "electric utility grid expansion project",
+  "quote_ready_en": "Britain Faces 150 Billion Grid Overhaul to Power Renewable Energy Boom Crude Oil Prices Today | OilPrice.com",
+  "quote_lint_ok": true,
+  "tags": [],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "utility",
+    "EPC",
+    "distributor"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self"
+  ],
+  "do_not_say_flags": [
+   "含交期/价格语义 —— 不可用于跟进信正文，仅作背景"
+  ],
+  "status": "new",
+  "used_in": [],
+  "notes": [
+   "Google News 聚合源；引用前须打开原链接核实，标注真实媒体名"
+  ]
+ },
+ {
+  "id": "b860f146abd6d021",
+  "category": "market_supply",
+  "source_id": "dcd",
+  "title": "NetworkOcean runs GPU on floating data center powered by solar panels in San Francisco Bay",
+  "summary_zh": "",
+  "summary_raw": "Startup has pivoted away from underwater data centers to harness the power of the sun",
+  "source_name": "Data Center Dynamics",
+  "source_url": "https://www.datacenterdynamics.com/en/news/networkocean-runs-gpu-on-floating-data-center-powered-by-solar-panels-in-san-francisco-bay/",
+  "published_at": "2026-10-02",
+  "fetched_at": "2026-10-03",
+  "credibility": "B",
+  "query": "",
+  "quote_ready_en": "Startup has pivoted away from underwater data centers to harness the power of the sun",
+  "quote_lint_ok": true,
+  "tags": [
+   "data_center"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "datacenter"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "286d9c6625ab1eb9",
+  "category": "market_supply",
+  "source_id": "dcd",
+  "title": "Xeal wants to use spare EV charging capacity to power Edge data centers for AI inference",
+  "summary_zh": "",
+  "summary_raw": "GPUs could be coming to a parking lot near you",
+  "source_name": "Data Center Dynamics",
+  "source_url": "https://www.datacenterdynamics.com/en/news/xeal-wants-to-use-spare-ev-charging-capacity-to-power-edge-data-centers-for-ai-inference/",
+  "published_at": "2026-10-02",
+  "fetched_at": "2026-10-03",
+  "credibility": "B",
+  "query": "",
+  "quote_ready_en": "GPUs could be coming to a parking lot near you",
+  "quote_lint_ok": true,
+  "tags": [
+   "data_center",
+   "capacity"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "datacenter"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ },
+ {
+  "id": "f95d534b8f07b8aa",
+  "category": "market_supply",
+  "source_id": "dcd",
+  "title": "When racks outpace the infrastructure: Retrofitting data center power systems for AI-scale densities",
+  "summary_zh": "",
+  "summary_raw": "And why there's constraints to overcome in order to meet AI workload demands",
+  "source_name": "Data Center Dynamics",
+  "source_url": "https://www.datacenterdynamics.com/en/opinions/when-racks-outpace-the-infrastructure-retrofitting-data-center-power-systems-for-ai-scale-densities/",
+  "published_at": "2026-10-02",
+  "fetched_at": "2026-10-03",
+  "credibility": "B",
+  "query": "",
+  "quote_ready_en": "And why there's constraints to overcome in order to meet AI workload demands",
+  "quote_lint_ok": true,
+  "tags": [
+   "lead_time",
+   "data_center",
+   "contract_award"
+  ],
+  "audience_slice": {
+   "geo": [
+    "US",
+    "CA"
+   ],
+   "buyer_type": [
+    "datacenter"
+   ],
+   "product_line": [
+    "distribution",
+    "power"
+   ]
+  },
+  "usable_in": [
+   "self",
+   "followup"
+  ],
+  "do_not_say_flags": [],
+  "status": "new",
+  "used_in": [],
+  "notes": []
+ }
+]

@@ -1,0 +1,40 @@
+{
+ "sources": {
+  "utilitydive": {
+   "last_fetched": "2026-10-03 21:53",
+   "last_status": "ok"
+  },
+  "dcd": {
+   "last_fetched": "2026-10-03 21:43",
+   "last_status": "ok"
+  },
+  "eia": {
+   "last_fetched": "2026-10-03 21:53",
+   "last_status": "ok"
+  },
+  "pvmagazine": {
+   "last_fetched": "2026-10-03 21:01",
+   "last_status": "ok"
+  },
+  "fedreg": {
+   "last_fetched": "2026-10-03 21:53",
+   "last_status": "ok"
+  },
+  "edgar": {
+   "last_fetched": "2026-10-03 21:53",
+   "last_status": "ok"
+  },
+  "gnews_market": {
+   "last_fetched": "2026-10-03 21:54",
+   "last_status": "degraded"
+  },
+  "gnews_competitor": {
+   "last_fetched": "2026-10-03 21:54",
+   "last_status": "ok"
+  },
+  "gnews_customer": {
+   "last_fetched": "2026-10-03 21:54",
+   "last_status": "ok"
+  }
+ }
+}

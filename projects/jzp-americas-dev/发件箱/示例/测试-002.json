@@ -1,0 +1,15 @@
+{
+  "to": [
+    "{{CONTACT_EMAIL}}"
+  ],
+  "subject": "[测试5] 发件箱接口 - 写作agent接入验证",
+  "html_file": "bodies/示例-001.html",
+  "text": "Dear C. Nelson,\n\nI'm {{SENDER_NAME}} at JIEZOU POWER, a Chinese manufacturer of liquid-immersed distribution transformers.\n\nMost distributors in North America are facing the same problem right now: quoted lead times of 26 to 40 weeks for standard distribution units, and longer for three-phase pad-mount.\n\nWe can deliver in 24 weeks.\n\nBest regards,\n{{SENDER_NAME}} | JIEZOU POWER\{{SENDER_EMAIL}} | {{SENDER_PHONE}}",
+  "meta": {
+    "company": "{{COMPANY}} Co. of Houston",
+    "country": "US",
+    "priority": "A",
+    "lead_time": 24,
+    "source": "端到端测试"
+  }
+}

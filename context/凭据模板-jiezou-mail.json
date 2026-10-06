@@ -1,0 +1,10 @@
+{
+  "email": "{{SENDER_EMAIL}}",
+  "password": "在这里填客户端专用密码",
+  "sender_name": "{{SENDER_NAME}}",
+  "imap_host": "imap.exmail.qq.com",
+  "imap_port": 993,
+  "smtp_host": "smtp.exmail.qq.com",
+  "smtp_port": 465,
+  "sent_folder": "Sent Messages"
+}

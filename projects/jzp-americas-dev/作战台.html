@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JZP 北美 + 南美 客户开发作战台</title>
+<style>
+:root{
+  --bg:#f5f6f8;
+  --card:#ffffff;
+  --ink:#1a1f2b;
+  --ink2:#4a5468;
+  --ink3:#7c8598;
+  --line:#e2e6ed;
+  --line2:#eef1f6;
+  --navy:#1c3b6e;
+  --navy2:#eaf0f9;
+  --teal:#0f6f6c;
+  --teal2:#e6f4f3;
+  --red:#a8232b;
+  --red2:#fdeeee;
+  --amber:#8a5a00;
+  --amber2:#fdf4e3;
+  --green:#1f6b3a;
+  --green2:#e9f5ed;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:"PingFang SC","Heiti SC","Microsoft YaHei",-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);
+  font-size:14px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 22px 60px;}
+
+/* header */
+header{margin-bottom:22px;}
+h1{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:-.01em;}
+.sub{color:var(--ink3);font-size:13px;margin-top:5px;}
+
+/* tabs */
+.tabs{display:flex;gap:6px;border-bottom:2px solid var(--line);margin:22px 0 0;flex-wrap:wrap;}
+.tab{
+  padding:9px 16px;border:none;background:none;cursor:pointer;
+  font-size:13.5px;font-weight:600;color:var(--ink3);
+  border-bottom:2.5px solid transparent;margin-bottom:-2px;
+  font-family:inherit;transition:color .15s;
+}
+.tab:hover{color:var(--ink2);}
+.tab.on{color:var(--navy);border-bottom-color:var(--navy);}
+
+/* panels */
+.panel{display:none;padding-top:22px;}
+.panel.on{display:block;}
+
+/* card */
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:8px;
+  padding:20px 22px;margin-bottom:18px;
+}
+.card h2{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.card .desc{font-size:12.5px;color:var(--ink3);margin-bottom:14px;}
+
+/* table */
+table{width:100%;border-collapse:collapse;font-size:12.5px;}
+th{
+  background:var(--navy2);color:var(--navy);font-weight:700;
+  text-align:left;padding:8px 10px;border-bottom:1.5px solid #cdd9ec;
+  white-space:nowrap;font-size:12px;
+}
+td{padding:8px 10px;border-bottom:1px solid var(--line2);vertical-align:top;color:var(--ink2);}
+tbody tr:hover td{background:#fafbfc;}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap;}
+td b{color:var(--ink);}
+th.sortable{cursor:pointer;user-select:none;}
+th.sortable:hover{background:#dfe8f6;}
+th.sortable::after{content:" ⇅";color:#a8b5cc;font-size:10px;}
+th.asc::after{content:" ▲";color:var(--navy);}
+th.desc::after{content:" ▼";color:var(--navy);}
+
+/* tags */
+.tag{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:3px;white-space:nowrap;}
+.t-go{background:var(--green2);color:var(--green);}
+.t-no{background:var(--red2);color:var(--red);}
+.t-mid{background:var(--amber2);color:var(--amber);}
+.t-info{background:var(--navy2);color:var(--navy);}
+
+/* selectors */
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin-bottom:16px;}
+.fld{display:flex;flex-direction:column;gap:5px;min-width:190px;}
+.fld label{font-size:11.5px;font-weight:700;color:var(--ink3);letter-spacing:.03em;}
+select,input{
+  font-family:inherit;font-size:13px;padding:8px 10px;
+  border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);
+  outline:none;
+}
+select:focus,input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(28,59,110,.08);}
+input[type=number]{text-align:right;font-variant-numeric:tabular-nums;}
+
+/* verdict box */
+.verdict{border-radius:8px;padding:16px 18px;margin-top:4px;border-left:4px solid var(--navy);background:var(--navy2);}
+.verdict.ok{border-color:var(--green);background:var(--green2);}
+.verdict.no{border-color:var(--red);background:var(--red2);}
+.verdict.mid{border-color:var(--amber);background:var(--amber2);}
+.verdict .vh{font-size:15px;font-weight:800;margin-bottom:8px;}
+.verdict.ok .vh{color:var(--green);}
+.verdict.no .vh{color:var(--red);}
+.verdict.mid .vh{color:var(--amber);}
+.verdict .vb{font-size:12.5px;color:var(--ink2);}
+.verdict .vb p{margin-bottom:6px;}
+.verdict .vb p:last-child{margin-bottom:0;}
+
+/* checklist */
+.chk{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid var(--line2);}
+.chk:last-child{border-bottom:none;}
+.chk input[type=checkbox]{margin-top:3px;width:15px;height:15px;accent-color:var(--navy);cursor:pointer;flex-shrink:0;}
+.chk label{cursor:pointer;font-size:13px;color:var(--ink2);flex:1;}
+.chk.done label{color:var(--ink3);text-decoration:line-through;}
+.chk .meta{font-size:11px;color:var(--ink3);display:block;margin-top:2px;}
+
+/* progress */
+.prog{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:12px 0 4px;}
+.prog>div{height:100%;background:var(--navy);transition:width .3s;border-radius:3px;}
+.progtxt{font-size:11.5px;color:var(--ink3);display:flex;justify-content:space-between;}
+
+/* misc */
+.note{
+  font-size:11.5px;color:var(--ink3);background:#fafbfc;
+  border:1px solid var(--line2);border-radius:6px;padding:10px 12px;margin-top:12px;line-height:1.7;
+}
+.note b{color:var(--ink2);}
+.warn{border-color:#f0d9a8;background:var(--amber2);}
+.warn b{color:var(--amber);}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+.btn{
+  font-family:inherit;font-size:12.5px;font-weight:600;padding:7px 14px;
+  border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink2);cursor:pointer;
+}
+.btn:hover{border-color:var(--navy);color:var(--navy);}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11.5px;color:var(--ink3);margin-top:10px;}
+.legend span{display:flex;align-items:center;gap:5px;}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>JZP 北美 + 南美 客户开发作战台</h1>
+  <div class="sub">配套《JZP 北美 + 南美 客户开发作战手册（2026 Q4 – 2027）》· 编制 2026-09-27</div>
+</header>
+
+<div class="tabs">
+  <button class="tab on" data-p="p1">市场优先级</button>
+  <button class="tab" data-p="p2">产品线 × 市场 合规</button>
+  <button class="tab" data-p="p3">落地成本试算</button>
+  <button class="tab" data-p="p4">认证缺口</button>
+  <button class="tab" data-p="p5">90 天计划</button>
+</div>
+
+<!-- ============ P1 市场优先级 ============ -->
+<div class="panel on" id="p1">
+  <div class="card">
+    <h2>市场优先级矩阵</h2>
+    <div class="desc">点表头可排序。综合分 = 市场机会 − 进入成本，权重可按你的判断调整（见下方权重行）。</div>
+    <table id="mkt">
+      <thead>
+        <tr>
+          <th class="sortable" data-k="name">市场</th>
+          <th class="sortable" data-k="freq">频率</th>
+          <th class="sortable" data-k="size">市场规模</th>
+          <th class="sortable" data-k="duty">关税</th>
+          <th class="sortable" data-k="cert">认证门槛</th>
+          <th class="sortable" data-k="score">综合分</th>
+          <th>结论</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--green)"></i>第一梯队 · 立即行动</span>
+      <span><i class="dot" style="background:var(--amber)"></i>第二轮 · 需前置投入</span>
+      <span><i class="dot" style="background:var(--red)"></i>暂缓</span>
+    </div>
+    <div class="note warn">
+      <b>评分逻辑说明：</b>综合分是「需求规模 + 产品适配性 + 进入容易度」的加权结果，<b>不是官方排名</b>，是我基于本手册调研数据的判断模型，用于排序，不用于决策背书。频率是硬约束——60Hz 国家的产品可直接适配，50Hz 需要重算铁芯截面，因此 50Hz 市场即使规模更大也排在后面。
+    </div>
+  </div>
+</div>
+
+<!-- ============ P2 合规 ============ -->
+<div class="panel" id="p2">
+  <div class="card">
+    <h2>产品线 × 市场 合规检查</h2>
+    <div class="desc">选择产品线与目标市场，检查能否销售、适用税负、需要的认证。</div>
+    <div class="row">
+      <div class="fld">
+        <label>产品线</label>
+        <select id="prod"></select>
+      </div>
+      <div class="fld">
+        <label>目标市场</label>
+        <select id="mkt2"></select>
+      </div>
+    </div>
+    <div id="vbox"></div>
+    <div class="note">
+      <b>数据口径：</b>美国关税为基于公开公告的<b>估算值</b>，须由持牌报关行按 10 位 HTS 核定。合规判断依据 2026-08-26 签署的大电力系统行政令（编号 14420 / 14421 待核）与 BABA 规则。
+    </div>
+  </div>
+</div>
+
+<!-- ============ P3 落地成本 ============ -->
+<div class="panel" id="p3">
+  <div class="card">
+    <h2>落地成本试算器</h2>
+    <div class="desc">输入 FOB 价与运费，估算各市场的到岸成本。<b>税率是可编辑的输入项——请用报关行的书面税则意见替换默认值。</b></div>
+    <div class="row">
+      <div class="fld">
+        <label>FOB 价（USD）</label>
+        <input type="number" id="fob" value="10000" step="500" min="0">
+      </div>
+      <div class="fld">
+        <label>海运费 + 保险（USD）</label>
+        <input type="number" id="fr8" value="1200" step="100" min="0">
+      </div>
+      <div class="fld">
+        <label>显示口径</label>
+        <select id="basis">
+          <option value="cif">按 CIF 计税（多数国家）</option>
+          <option value="fob">按 FOB 计税</option>
+        </select>
+      </div>
+    </div>
+    <div class="bar">
+      <button class="btn" id="reset-rates">恢复调研默认税率</button>
+    </div>
+    <table id="cost">
+      <thead>
+        <tr>
+          <th>市场</th>
+          <th style="width:110px">关税率 %</th>
+          <th style="width:110px">增值税/消费税 %</th>
+          <th class="n">关税</th>
+          <th class="n">增值税</th>
+          <th class="n">到岸总成本</th>
+          <th class="n">相对 FOB</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="note warn" id="costnote"></div>
+  </div>
+</div>
+
+<!-- ============ P4 认证 ============ -->
+<div class="panel" id="p4">
+  <div class="card">
+    <h2>认证缺口清单</h2>
+    <div class="desc">勾选已完成项。进度保存在本机浏览器，不会上传。</div>
+    <div class="prog"><div id="certbar" style="width:0%"></div></div>
+    <div class="progtxt"><span id="certtxt">0 / 0</span><span>进度自动保存</span></div>
+    <div id="certlist" style="margin-top:14px"></div>
+    <div class="bar" style="margin-top:14px">
+      <button class="btn" id="cert-reset">清空勾选</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ P5 计划 ============ -->
+<div class="panel" id="p5">
+  <div class="card">
+    <h2>90 天行动计划（2026-10-01 → 2026-12-31）</h2>
+    <div class="desc">勾选已完成项。进度保存在本机浏览器。</div>
+    <div class="prog"><div id="planbar" style="width:0%"></div></div>
+    <div class="progtxt"><span id="plantxt">0 / 0</span><span>进度自动保存</span></div>
+    <div id="planlist" style="margin-top:14px"></div>
+    <div class="bar" style="margin-top:14px">
+      <button class="btn" id="plan-reset">清空勾选</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+/* ============================ 数据 ============================ */
+
+const MARKETS = [
+  {code:"CA", name:"加拿大", freq:"60Hz", size:"19.6 亿美元 (2025)", duty:"0%",
+   cert:"CSA C227.4 / cUL", score:96,
+   verdict:"第一优先", vcls:"t-go",
+   why:"零关税 + 无中国附加税 + 交期 100 周以上 + 我方 CSA 资质已有。全手册门槛最低 × 需求最旺的组合。"},
+  {code:"US", name:"美国（配电变）", freq:"60Hz", size:"配电变需求 +34%", duty:"约 50%（估算）",
+   cert:"UL / cUL / DOE 能效", score:88,
+   verdict:"第一优先（限配电变）", vcls:"t-go",
+   why:"产品线落在行政令的本地配电豁免区。需求由数据中心驱动，本土交期 26–40 周且三相美变持续恶化。"},
+  {code:"MX", name:"墨西哥", freq:"60Hz", size:"12.0 亿美元 (2025)", duty:"5%–35%",
+   cert:"NOM + CFE 注册", score:82,
+   verdict:"南美第一优先", vcls:"t-go",
+   why:"60Hz 美标体系，产品零改造适配。CFE 2025–2030 年 82 亿美元电网投资。代价：NOM 强制认证 + 2030 年 60% 本地化目标。"},
+  {code:"BR", name:"巴西", freq:"60Hz", size:"4.46 亿美元（配电变）", duty:"12.6%（可申请 Ex-Tarifário 至 0%）",
+   cert:"INMETRO + ANEEL", score:76,
+   verdict:"南美第二优先", vcls:"t-go",
+   why:"南美最大单一配电变市场。ILAC 报告可被 OCP 复用，认证成本低于纯中国同行。本地交期长形成套利窗口。"},
+  {code:"PE", name:"秘鲁", freq:"60Hz", size:"中等（矿业驱动）", duty:"多数 0%（中秘 FTA）",
+   cert:"OSINERGMIN（待核实）", score:68,
+   verdict:"南美第三优先", vcls:"t-mid",
+   why:"产品适配性与关税条件最好，但认证法规口径未能证实，须直查官方。矿业终端单价高、复购强。"},
+  {code:"CO", name:"哥伦比亚", freq:"60Hz", size:"中等（配网改造）", duty:"10% + IVA 19%",
+   cert:"RETIE（强制）", score:62,
+   verdict:"南美第三优先", vcls:"t-mid",
+   why:"无中哥 FTA，认证与税负是主要成本。配网改造需求稳定，买方以 EPC 与分销商为主。"},
+  {code:"CL", name:"智利", freq:"50Hz", size:"小但增速高", duty:"6%（中智 FTA 下多数 0%）",
+   cert:"SEC", score:54,
+   verdict:"第二轮", vcls:"t-mid",
+   why:"关税最低、付款条件最优、矿业与光伏需求明确。但 50Hz 需重算铁芯截面与损耗，属真实的重设计成本。"},
+  {code:"EC", name:"厄瓜多尔", freq:"60Hz", size:"小", duty:"无 FTA",
+   cert:"本地合规", score:48,
+   verdict:"观察", vcls:"t-mid",
+   why:"60Hz 适配，但市场体量小、法规信息不完整。作为墨西哥/秘鲁客户溢出的机会跟进。"},
+  {code:"AR", name:"阿根廷", freq:"50Hz", size:"需求存在，宏观不稳", duty:"Mercosur AEC",
+   cert:"IRAM / ENRE", score:40,
+   verdict:"第二轮", vcls:"t-mid",
+   why:"外汇管制已显著改善（2025-04 起可自清关日起通过 MLC 支付，SIRA 已废止），但 50Hz 需重设计，且宏观风险仍在。"},
+];
+
+const PRODUCTS = [
+  {id:"pm1", name:"单相美式箱变 25–167kVA", hs:"8504.21"},
+  {id:"pm3", name:"三相美式箱变 ≤5000kVA", hs:"8504.22"},
+  {id:"sub", name:"变电站变压器 >10MVA", hs:"8504.23"},
+  {id:"dry", name:"干式变压器 >500kVA", hs:"8504.34"},
+];
+
+// 合规矩阵：可销售性 + 税负 + 认证要求
+const COMPLY = {
+  pm1:{
+    US:{sale:"go", tariff:"≈50%", cert:"UL E541626/E541627 · cUL · DOE 能效（2029-04）",
+        note:"属于「仅接入本地配电」的豁免范畴，行政令不适用。需注意 BABA 约束联邦资助项目，商业采购不受限。"},
+    CA:{sale:"go", tariff:"0%", cert:"CSA C227.3（单相柱上）· cUL · NRCan 能效",
+        note:"8504 全系 MFN 免税，钢铝附加税令不覆盖 8504 章。真实门槛是省级公用事业的型式试验与供应商资格审查。"},
+    MX:{sale:"go", tariff:"5%–35%", cert:"NOM（强制）+ CFE 供应商注册",
+        note:"60Hz 美标体系，产品零改造。⚠️ NOM 是否承认 UL/cUL/CSA 标记待书面确认——这一条直接决定认证成本。"},
+    BR:{sale:"go", tariff:"12.6%（Ex-Tarifário 可至 0%）", cert:"INMETRO + ANEEL",
+        note:"⚠️ INMETRO 对该品类是强制还是自愿，官网与行业资料冲突，必须向 OCP 书面确认。ILAC 报告可复用。"},
+    PE:{sale:"go", tariff:"多数 0%（中秘 FTA）", cert:"OSINERGMIN / INACAL（口径待核实）",
+        note:"产品适配性与关税条件最优。认证法规编号与流程未能证实，须直查官方，不采信二手中文资料。"},
+    CO:{sale:"go", tariff:"10% + IVA 19%", cert:"RETIE（强制，现行 RETIE 2024）",
+        note:"无中哥 FTA。RETIE 修订草案 2025-02 已发布，须跟踪生效版本。"},
+    EC:{sale:"go", tariff:"无 FTA", cert:"本地合规",
+        note:"60Hz 适配。市场小，法规信息不完整，建议作为邻国客户溢出的机会跟进。"},
+    CL:{sale:"mid", tariff:"6%（中智 FTA 下多数 0%）", cert:"SEC 强制认证清单",
+        note:"⚠️ 50Hz 欧标体系，同容量铁芯截面需加大约 20%，损耗指标需重算。不要用 60Hz 图纸直接投标。"},
+    AR:{sale:"mid", tariff:"Mercosur AEC", cert:"IRAM / ENRE",
+        note:"⚠️ 50Hz，需重设计。外汇管制已改善，但宏观风险仍在。"},
+  },
+  pm3:{
+    US:{sale:"go", tariff:"≈50%", cert:"UL · cUL · IEEE C57.12.34 · DOE 能效",
+        note:"属于本地配电豁免范畴。⚠️ 交期端：三相美变被判定为继续恶化至 2027，这是我方最强的切入窗口。"},
+    CA:{sale:"go", tariff:"0%", cert:"CSA C227.4:21（三相美变）· cUL",
+        note:"CSA C227.4:21 我方已有。加拿大配电变占变压器市场 59.1%，且交期 100 周以上。"},
+    MX:{sale:"go", tariff:"5%–35%", cert:"NOM + CFE 注册", note:"同单相美变。产品零改造适配。"},
+    BR:{sale:"go", tariff:"12.6%", cert:"INMETRO + ANEEL", note:"同单相美变。"},
+    PE:{sale:"go", tariff:"多数 0%", cert:"OSINERGMIN（待核实）", note:"同单相美变。"},
+    CO:{sale:"go", tariff:"10% + IVA 19%", cert:"RETIE", note:"同单相美变。"},
+    EC:{sale:"go", tariff:"无 FTA", cert:"本地合规", note:"同单相美变。"},
+    CL:{sale:"mid", tariff:"6%", cert:"SEC", note:"⚠️ 50Hz 需重设计。"},
+    AR:{sale:"mid", tariff:"Mercosur AEC", cert:"IRAM / ENRE", note:"⚠️ 50Hz 需重设计。"},
+  },
+  sub:{
+    US:{sale:"no", tariff:"≈41.6%（2028 起 ≈51.6%）", cert:"—",
+        note:"❌ 接入 69kV 及以上电网的变电站变压器属 2026-08-26 行政令覆盖范围，美国应视为不可销售。DOE 细则预计 2026-12-24 前出台，存在追溯风险。该产品线北美重心须整体转向加拿大与南美。"},
+    CA:{sale:"go", tariff:"0%", cert:"CSA · cUL",
+        note:"加拿大无此限制。但需注意：省级公用事业（BC Hydro / Hydro One / Hydro-Québec）资格审查周期长，且大容量端竞争者是 Hitachi / Siemens。"},
+    MX:{sale:"go", tariff:"5%–35%", cert:"NOM + CFE 注册",
+        note:"CFE 大型输电项目仍由 Hitachi/Siemens/ABB 主导。机会在工业自备与 EPC 项目，而非主干网。"},
+    BR:{sale:"go", tariff:"15%（Annex III 档位）", cert:"INMETRO + ANEEL",
+        note:"ISA Energia Brasil / TAESA 等输电特许经营商的变电站扩建是明确入口。"},
+    PE:{sale:"go", tariff:"多数 0%", cert:"OSINERGMIN（待核实）", note:"矿业项目的自备变电站是主要机会。"},
+    CO:{sale:"go", tariff:"10% + IVA 19%", cert:"RETIE", note:"ISA Intercolombia 等输电商为主要入口。"},
+    EC:{sale:"go", tariff:"无 FTA", cert:"本地合规", note:"CELEC EP 为主要入口。"},
+    CL:{sale:"mid", tariff:"6%", cert:"SEC", note:"⚠️ 50Hz 需重设计。Transelec / CGE Transmisión 有公开招标门户。"},
+    AR:{sale:"mid", tariff:"Mercosur AEC", cert:"IRAM / ENRE", note:"⚠️ 50Hz 需重设计。Transener 为输电特许经营商。"},
+  },
+  dry:{
+    US:{sale:"go", tariff:"≈41.6%（2028 起 ≈51.6%）", cert:"UL · DOE 能效",
+        note:"8504.34 属 Annex III 档位（>500kVA 干式），15% 档位 2027-12-31 到期，2028-01-01 回到 25%。⚠️ 若干式变用于 ≥69kV 变电站场景，需单独评估是否落入行政令覆盖范围。"},
+    CA:{sale:"go", tariff:"0%", cert:"CSA · cUL",
+        note:"⚠️ 加拿大干变龙头 Hammond Power Solutions 是主要竞争者（2025 Q2 收入约 2.24 亿美元，同比 +14%）。我方液浸式产品线在加拿大反而更有优势。"},
+    MX:{sale:"go", tariff:"5%–35%", cert:"NOM + CFE 注册", note:"同其他产品线。"},
+    BR:{sale:"go", tariff:"12.6%", cert:"INMETRO + ANEEL", note:"同其他产品线。"},
+    PE:{sale:"go", tariff:"多数 0%", cert:"OSINERGMIN（待核实）", note:"同其他产品线。"},
+    CO:{sale:"go", tariff:"10% + IVA 19%", cert:"RETIE", note:"同其他产品线。"},
+    EC:{sale:"go", tariff:"无 FTA", cert:"本地合规", note:"同其他产品线。"},
+    CL:{sale:"mid", tariff:"6%", cert:"SEC", note:"⚠️ 50Hz 需重设计。"},
+    AR:{sale:"mid", tariff:"Mercosur AEC", cert:"IRAM / ENRE", note:"⚠️ 50Hz 需重设计。"},
+  },
+};
+
+// 落地成本默认税率（可编辑）
+const DEFAULT_RATES = {
+  CA:{duty:0,  vat:5,  vatLabel:"GST", vatNote:"GST 对企业通常可抵扣"},
+  US:{duty:50, vat:0,  vatLabel:"—",   vatNote:"按约 50% 估算（MFN 0% + 301 25% + 232 25%），须报关行核定"},
+  MX:{duty:20, vat:16, vatLabel:"IVA", vatNote:"关税 5%–35% 视税号而定，此处取中值 20% 作占位"},
+  BR:{duty:12.6, vat:18, vatLabel:"ICMS", vatNote:"II 12.6% + IPI 0%；ICMS 各州不同（此处取 18% 占位）"},
+  PE:{duty:0,  vat:18, vatLabel:"IGV", vatNote:"中秘 FTA 下多数 0%"},
+  CO:{duty:10, vat:19, vatLabel:"IVA", vatNote:"无中哥 FTA"},
+  EC:{duty:10, vat:15, vatLabel:"IVA", vatNote:"⚠️ 税率未核实，请替换为实际值"},
+  CL:{duty:6,  vat:19, vatLabel:"IVA", vatNote:"中智 FTA 下多数可降至 0%"},
+  AR:{duty:0,  vat:21, vatLabel:"IVA", vatNote:"⚠️ 关税未核实，请替换为实际值"},
+};
+
+/* ============================ P1 ============================ */
+const mktBody = document.querySelector('#mkt tbody');
+let sortK = 'score', sortDir = -1;
+
+function renderMkt(){
+  const rows = [...MARKETS].sort((a,b)=>{
+    let x=a[sortK], y=b[sortK];
+    if(typeof x === 'number'){ return (x-y)*sortDir; }
+    return String(x).localeCompare(String(y),'zh')*sortDir;
+  });
+  mktBody.innerHTML = rows.map(m=>`
+    <tr>
+      <td><b>${m.name}</b><div style="font-size:11px;color:var(--ink3)">${m.code}</div></td>
+      <td class="n">${m.freq}</td>
+      <td>${m.size}</td>
+      <td>${m.duty}</td>
+      <td>${m.cert}</td>
+      <td class="n"><b>${m.score}</b></td>
+      <td><span class="tag ${m.vcls}">${m.verdict}</span>
+          <div style="font-size:11.5px;color:var(--ink3);margin-top:4px">${m.why}</div></td>
+    </tr>`).join('');
+}
+document.querySelectorAll('#mkt th.sortable').forEach(th=>{
+  th.onclick = ()=>{
+    const k = th.dataset.k;
+    if(sortK === k){ sortDir *= -1; } else { sortK = k; sortDir = (k==='score'||k==='size') ? -1 : 1; }
+    document.querySelectorAll('#mkt th').forEach(t=>t.classList.remove('asc','desc'));
+    th.classList.add(sortDir>0?'asc':'desc');
+    renderMkt();
+  };
+});
+renderMkt();
+
+/* ============================ P2 ============================ */
+const prodSel = document.getElementById('prod');
+const mkt2Sel = document.getElementById('mkt2');
+PRODUCTS.forEach(p=>prodSel.add(new Option(`${p.name}（HS ${p.hs}）`, p.id)));
+MARKETS.forEach(m=>mkt2Sel.add(new Option(m.name, m.code)));
+
+function renderComply(){
+  const p = prodSel.value, c = mkt2Sel.value;
+  const d = COMPLY[p][c];
+  const mkt = MARKETS.find(x=>x.code===c);
+  const cls = d.sale==='go'?'ok':(d.sale==='no'?'no':'mid');
+  const head = d.sale==='go'?'可以销售':(d.sale==='no'?'不可销售':'有条件销售（需前置投入）');
+  document.getElementById('vbox').innerHTML = `
+    <div class="verdict ${cls}">
+      <div class="vh">${head}</div>
+      <div class="vb">
+        <p><b>产品线：</b>${PRODUCTS.find(x=>x.id===p).name}（HS ${PRODUCTS.find(x=>x.id===p).hs}）
+           &nbsp;·&nbsp; <b>市场：</b>${mkt.name}（${mkt.freq}）</p>
+        <p><b>税负：</b>${d.tariff}</p>
+        <p><b>认证要求：</b>${d.cert}</p>
+        <p style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(0,0,0,.07)">${d.note}</p>
+      </div>
+    </div>`;
+}
+prodSel.onchange = renderComply;
+mkt2Sel.onchange = renderComply;
+renderComply();
+
+/* ============================ P3 ============================ */
+const costBody = document.querySelector('#cost tbody');
+let rates = JSON.parse(JSON.stringify(DEFAULT_RATES));
+
+function renderCost(){
+  const fob = +document.getElementById('fob').value || 0;
+  const fr8 = +document.getElementById('fr8').value || 0;
+  const basis = document.getElementById('basis').value;
+  const base = basis === 'cif' ? fob + fr8 : fob;
+
+  const order = ['CA','US','MX','BR','PE','CO','CL','EC','AR'];
+  const out = [];
+  costBody.innerHTML = order.map(code=>{
+    const m = MARKETS.find(x=>x.code===code);
+    const r = rates[code];
+    const duty = base * (r.duty/100);
+    const vatBase = base + duty;
+    const vat = vatBase * (r.vat/100);
+    const total = base + duty + vat + fr8;
+    const ratio = fob>0 ? total/fob : 0;
+    out.push({code, total, ratio});
+    return `<tr>
+      <td><b>${m.name}</b><div style="font-size:11px;color:var(--ink3)">${code}</div></td>
+      <td><input type="number" step="0.5" min="0" value="${r.duty}" data-c="${code}" data-f="duty" style="width:80px"></td>
+      <td><input type="number" step="0.5" min="0" value="${r.vat}" data-c="${code}" data-f="vat" style="width:80px">
+          <div style="font-size:10.5px;color:var(--ink3)">${r.vatLabel}</div></td>
+      <td class="n">$${Math.round(duty).toLocaleString()}</td>
+      <td class="n">$${Math.round(vat).toLocaleString()}</td>
+      <td class="n"><b>$${Math.round(total).toLocaleString()}</b></td>
+      <td class="n">${ratio ? (ratio*100).toFixed(0)+'%' : '—'}</td>
+    </tr>`;
+  }).join('');
+
+  costBody.querySelectorAll('input').forEach(inp=>{
+    inp.oninput = ()=>{
+      const c = inp.dataset.c, f = inp.dataset.f;
+      rates[c][f] = +inp.value || 0;
+      const caret = inp.selectionStart;
+      renderCost();
+      const again = costBody.querySelector(`input[data-c="${c}"][data-f="${f}"]`);
+      if(again){ again.focus(); try{ again.setSelectionRange(caret, caret); }catch(e){} }
+    };
+  });
+
+  const sorted = [...out].sort((a,b)=>a.total-b.total);
+  document.getElementById('costnote').innerHTML =
+    `<b>成本排序（低→高）：</b>${sorted.map(x=>MARKETS.find(m=>m.code===x.code).name).join(' → ')}<br>
+     <b>口径：</b>${basis==='cif'?'按 CIF 计税（多数国家）':'按 FOB 计税'}；
+     增值税在多数市场对企业可部分抵扣，此处按<b>不可抵扣</b>的保守口径计算。<br>
+     <b>⚠️ 这些税率是占位值，不是结论。</b>美国须由持牌报关行按 10 位 HTS 出具书面税则意见；巴西须按具体 NCM 核对 GECEX 852/2026 是否加税；厄瓜多尔与阿根廷的税率<b>未核实</b>。`;
+}
+document.getElementById('fob').oninput = renderCost;
+document.getElementById('fr8').oninput = renderCost;
+document.getElementById('basis').onchange = renderCost;
+document.getElementById('reset-rates').onclick = ()=>{
+  rates = JSON.parse(JSON.stringify(DEFAULT_RATES)); renderCost();
+};
+renderCost();
+
+/* ============================ P4 认证清单 ============================ */
+const CERT_ITEMS = [
+  {id:"c1", t:"向报关行取得 10 位 HTS 级书面税则意见（8504.21/.22/.23/.33/.34）", m:"最高优先级 · 决定报价"},
+  {id:"c2", t:"书面确认巴西 INMETRO 对液浸式配电变压器是强制还是自愿", m:"向巴西 OCP 发函 · 决定巴西是 6–12 个月门票还是可先卖货"},
+  {id:"c3", t:"确认墨西哥 NOM 是否承认 UL/cUL/CSA 标记", m:"决定墨西哥认证成本量级"},
+  {id:"c4", t:"向巴西 OCP 提交 UL/CSA 报告的 ILAC 复用评估申请", m:"这是相对纯中国同行的可量化成本优势"},
+  {id:"c5", t:"核实 Ex-Tarifário 是否覆盖我方型号（巴西）", m:"若可申请，II 从 12.6% 降至 0%"},
+  {id:"c6", t:"核实 GECEX 852/2026 加税是否覆盖我方 NCM（巴西）", m:"NCM 查询页显示 20% 例外清单，与标准 TEC 12.6% 冲突"},
+  {id:"c7", t:"确认秘鲁 OSINERGMIN / INACAL 的具体法规编号与流程", m:"不要采信二手中文资料"},
+  {id:"c8", t:"跟踪 DOE 2024 能效规则最终形态（docket EERE-2026-BT-STD-0133）", m:"2029-04 是硬节点，建议一次性按最严版本设计"},
+  {id:"c9", t:"跟踪 EO 14420/14421 实施细则（预计 2026-12-24 前出台）", m:"出台后 72 小时内产出影响评估"},
+  {id:"c10", t:"内部确认 60Hz 产品线是否已有可复用的型式试验数据", m:"决定墨西哥/巴西认证周期"},
+  {id:"c11", t:"完成 CFE 供应商注册（墨西哥）", m:"进入 CFE 合格供应商名录"},
+  {id:"c12", t:"注册巴西四家公用事业供应商门户（CEMIG / CPFL / Neoenergia / Equatorial）", m:"先入库再谈"},
+  {id:"c13", t:"核实联邦公报原文确认行政令编号（14420 还是 14421）", m:"影响合规文件引用的准确性"},
+];
+
+/* ============================ P5 计划 ============================ */
+const PLAN_ITEMS = [
+  {id:"p1",  w:"第 1–2 周", t:"应用南美市场权重补丁，重建索引并跑自测", m:"验收：selftest_pipeline.py 26/26 全绿"},
+  {id:"p2",  w:"第 1–2 周", t:"向报关行索取 10 位 HTS 级书面税则意见", m:"验收：拿到书面文件，替换手册第 2 章估算值"},
+  {id:"p3",  w:"第 1–2 周", t:"建立关税测算表，把税则意见固化成可复用报价工具", m:"验收：输入 FOB 价可自动输出 DDP 参考价"},
+  {id:"p4",  w:"第 1–2 周", t:"起草《Reference Authorization》授权模板并发出首批", m:"验收：模板可直接发送；优先 AC Tesla、Wilson High Voltage"},
+  {id:"p5",  w:"第 3–4 周", t:"用 ImportYeti 免费版按 HS 8504 拉取美国进口商及其中国供应商", m:"验收：≥200 家美国进口商，含供应商列"},
+  {id:"p6",  w:"第 3–4 周", t:"导出 NRECA 会员名录 + APPA 按州市政名录", m:"验收：≥800 家合作社/市政机构，含所在州"},
+  {id:"p7",  w:"第 3–4 周", t:"抓取 DISTRIBUTECH / NRECA TechAdvantage 参展商名录", m:"验收：买家名单 + 中国同行名单（竞对情报）"},
+  {id:"p8",  w:"第 3–4 周", t:"将南美首批目标客户 CSV 导入现有流水线", m:"验收：customs_data_fetch.py --profile manual 跑通，产出分级线索"},
+  {id:"p9",  w:"第 5–8 周", t:"书面确认巴西 INMETRO 强制性（向 OCP 发函）", m:"验收：拿到书面答复"},
+  {id:"p10", w:"第 5–8 周", t:"向巴西 OCP 提交 ILAC 报告复用评估申请", m:"验收：拿到测试复用范围与报价"},
+  {id:"p11", w:"第 5–8 周", t:"核实 Ex-Tarifário 是否覆盖我方型号", m:"验收：书面确认；若可申请，启动流程"},
+  {id:"p12", w:"第 5–8 周", t:"确认墨西哥 NOM 是否承认 UL/cUL/CSA 标记", m:"验收：书面确认"},
+  {id:"p13", w:"第 5–8 周", t:"完成 CFE 供应商注册（墨西哥）", m:"验收：进入 CFE 合格供应商名录"},
+  {id:"p14", w:"第 5–8 周", t:"注册巴西四家公用事业供应商门户", m:"验收：CEMIG / CPFL / Neoenergia / Equatorial 全部完成"},
+  {id:"p15", w:"第 5–8 周", t:"确认秘鲁 OSINERGMIN / INACAL 的具体法规编号与流程", m:"验收：拿到官方文件"},
+  {id:"p16", w:"第 9–12 周", t:"对加拿大客户与线索重新分级（零关税背景下价值重估）", m:"验收：产出加拿大优先名单"},
+  {id:"p17", w:"第 9–12 周", t:"启动北美 Mail Group 序列（优先合作社、市政、EPC/分销商）", m:"验收：首轮 ≥100 家触达，记录回复率基线"},
+  {id:"p18", w:"第 9–12 周", t:"启动南美西语序列（墨西哥、秘鲁、哥伦比亚）", m:"验收：首轮 ≥50 家触达"},
+  {id:"p19", w:"第 9–12 周", t:"启动南美葡语序列（巴西）", m:"验收：首轮 ≥30 家触达"},
+  {id:"p20", w:"第 9–12 周", t:"锁定 2027 两场展会（NRECA PowerXchange、DISTRIBUTECH）", m:"验收：展位或参会注册完成"},
+];
+
+function buildList(elId, items, storeKey, barId, txtId, extra){
+  const el = document.getElementById(elId);
+  let done = JSON.parse(localStorage.getItem(storeKey) || '{}');
+  function render(){
+    el.innerHTML = items.map((it,i)=>`
+      <div class="chk ${done[it.id]?'done':''}">
+        <input type="checkbox" id="${storeKey}-${it.id}" ${done[it.id]?'checked':''}>
+        <label for="${storeKey}-${it.id}">
+          ${extra?`<span class="tag t-info" style="margin-right:6px">${it.w}</span>`:''}${it.t}
+          <span class="meta">${it.m}</span>
+        </label>
+      </div>`).join('');
+    el.querySelectorAll('input').forEach(inp=>{
+      inp.onchange = ()=>{
+        done[inp.id.replace(storeKey+'-','')] = inp.checked;
+        localStorage.setItem(storeKey, JSON.stringify(done));
+        render();
+      };
+    });
+    const n = items.filter(x=>done[x.id]).length;
+    document.getElementById(barId).style.width = (n/items.length*100)+'%';
+    document.getElementById(txtId).textContent = `${n} / ${items.length}`;
+  }
+  render();
+  return ()=>{ done={}; localStorage.setItem(storeKey,'{}'); render(); };
+}
+const resetCert = buildList('certlist', CERT_ITEMS, 'jzp-cert', 'certbar', 'certtxt', false);
+const resetPlan = buildList('planlist', PLAN_ITEMS, 'jzp-plan', 'planbar', 'plantxt', true);
+document.getElementById('cert-reset').onclick = resetCert;
+document.getElementById('plan-reset').onclick = resetPlan;
+
+/* ============================ tabs ============================ */
+document.querySelectorAll('.tab').forEach(t=>{
+  t.onclick = ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+    t.classList.add('on');
+    document.getElementById(t.dataset.p).classList.add('on');
+  };
+});
+</script>
+</body>
+</html>

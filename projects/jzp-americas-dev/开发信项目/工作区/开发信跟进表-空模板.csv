@@ -1,0 +1,2 @@
+#,发送日期,公司名称,国家/地区,联系人,职位,买家类型,需求产品,触达来源,骨架,建议发送时间(北京),邮箱,状态,跟进次数,下次跟进日,最后联系日,备注 / 下一步
+1,{{SEND_DATE}},{{COMPANY}},{{COUNTRY}},{{CONTACT_NAME}},{{CONTACT_TITLE}},{{BUYER_TYPE}},{{PRODUCT}},{{SOURCE}},A,{{BJ_WINDOW}},{{CONTACT_EMAIL}},未发送,0,,,

@@ -1,0 +1,35 @@
+# ── 机器生成的垃圾 ──────────────────────────
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db
+ehthumbs.db
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# ── 依赖目录 ────────────────────────────────
+node_modules/
+.opencode/
+.venv/
+venv/
+
+# ── 凭据：永不入库 ──────────────────────────
+**/.config/jiezou-mail/
+jiezou-mail/
+credentials.json
+credential.json
+*credentials*.json
+*.key
+*.pem
+*.p12
+.env
+.env.*
+
+# ── 编辑/系统临时文件 ───────────────────────
+*.swp
+*.swo
+*~
+.Trash/
+.Spotlight-V100/

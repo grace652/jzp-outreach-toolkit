@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>JZP 北美 + 南美 客户开发作战手册（2026 Q4 – 2027）</title>
+<style>
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+
+:root{
+  --ink:#1a1f2b;
+  --ink-2:#3d4657;
+  --ink-3:#6b7488;
+  --line:#dfe3ea;
+  --line-2:#eef1f6;
+  --bg-soft:#f7f8fa;
+  --navy:#1c3b6e;
+  --navy-soft:#eaf0f9;
+  --teal:#0f6f6c;
+  --teal-soft:#e6f4f3;
+  --red:#a8232b;
+  --red-soft:#fdeeee;
+  --amber:#8a5a00;
+  --amber-soft:#fdf4e3;
+  --green:#1f6b3a;
+  --green-soft:#e9f5ed;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  padding:0;
+  font-family:"PingFang SC","Heiti SC","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  font-size:10.5pt;
+  line-height:1.75;
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+}
+
+.page{max-width:186mm;margin:0 auto;padding:0 0 24mm;}
+
+/* ---------- 封面 ---------- */
+.cover{
+  border-bottom:3px solid var(--navy);
+  padding:0 0 14mm;
+  margin-bottom:10mm;
+}
+.cover .kicker{
+  font-size:9pt;letter-spacing:.22em;color:var(--ink-3);
+  text-transform:uppercase;margin-bottom:6mm;font-weight:600;
+}
+.cover h1{
+  font-size:26pt;line-height:1.28;margin:0 0 5mm;
+  font-weight:800;letter-spacing:-.01em;color:var(--navy);
+}
+.cover .sub{
+  font-size:12pt;color:var(--ink-2);margin:0 0 8mm;line-height:1.6;font-weight:500;
+}
+.cover .meta{
+  display:flex;flex-wrap:wrap;gap:4mm 10mm;
+  font-size:9pt;color:var(--ink-3);border-top:1px solid var(--line);padding-top:4mm;
+}
+.cover .meta b{color:var(--ink-2);font-weight:600;}
+
+/* ---------- 标题层级 ---------- */
+h2{
+  font-size:15pt;font-weight:700;color:var(--navy);
+  margin:12mm 0 4mm;padding-bottom:2.5mm;
+  border-bottom:1.5px solid var(--navy);
+  page-break-after:avoid;
+}
+h2 .num{
+  display:inline-block;min-width:9mm;color:var(--ink-3);
+  font-weight:600;font-size:12pt;
+}
+h3{
+  font-size:11.5pt;font-weight:700;color:var(--ink);
+  margin:7mm 0 2.5mm;page-break-after:avoid;
+}
+h4{
+  font-size:10.5pt;font-weight:700;color:var(--ink-2);
+  margin:5mm 0 2mm;page-break-after:avoid;
+}
+p{margin:0 0 3mm;}
+ul,ol{margin:0 0 3mm;padding-left:6mm;}
+li{margin-bottom:1.5mm;}
+li>ul,li>ol{margin-top:1.5mm;}
+
+/* ---------- 表格 ---------- */
+table{
+  width:100%;border-collapse:collapse;margin:3mm 0 5mm;
+  font-size:9pt;line-height:1.55;page-break-inside:avoid;
+}
+table.wide{font-size:8.3pt;}
+th{
+  background:var(--navy);color:#fff;font-weight:600;
+  text-align:left;padding:2.2mm 2.4mm;border:1px solid var(--navy);
+  vertical-align:top;
+}
+td{
+  padding:2.2mm 2.4mm;border:1px solid var(--line);
+  vertical-align:top;color:var(--ink-2);
+}
+tbody tr:nth-child(even) td{background:var(--bg-soft);}
+td.num{white-space:nowrap;font-variant-numeric:tabular-nums;}
+td b,td strong{color:var(--ink);}
+
+/* ---------- 强调块 ---------- */
+.callout{
+  border-left:3.5px solid var(--navy);background:var(--navy-soft);
+  padding:3.5mm 4mm;margin:4mm 0;page-break-inside:avoid;
+}
+.callout.warn{border-color:var(--red);background:var(--red-soft);}
+.callout.ok{border-color:var(--green);background:var(--green-soft);}
+.callout.amber{border-color:var(--amber);background:var(--amber-soft);}
+.callout .t{
+  font-weight:700;font-size:10pt;margin-bottom:1.5mm;color:var(--ink);
+}
+.callout.warn .t{color:var(--red);}
+.callout.ok .t{color:var(--green);}
+.callout.amber .t{color:var(--amber);}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0;}
+
+/* ---------- 结论条 ---------- */
+.verdict{
+  border:1.5px solid var(--navy);background:#fff;
+  padding:4mm;margin:4mm 0;page-break-inside:avoid;
+}
+.verdict .t{font-weight:700;color:var(--navy);margin-bottom:2mm;font-size:10.5pt;}
+
+/* ---------- 标签 ---------- */
+.tag{
+  display:inline-block;font-size:7.5pt;font-weight:600;
+  padding:.6mm 1.8mm;border-radius:2px;line-height:1.5;
+  vertical-align:middle;white-space:nowrap;
+}
+.tag.go{background:var(--green-soft);color:var(--green);border:1px solid #bfe0cb;}
+.tag.no{background:var(--red-soft);color:var(--red);border:1px solid #eec4c6;}
+.tag.mid{background:var(--amber-soft);color:var(--amber);border:1px solid #ecd7a8;}
+.tag.info{background:var(--navy-soft);color:var(--navy);border:1px solid #c9d8ee;}
+
+/* ---------- 目录 ---------- */
+.toc{
+  background:var(--bg-soft);border:1px solid var(--line);
+  padding:5mm 6mm;margin:0 0 8mm;page-break-inside:avoid;
+}
+.toc .t{font-weight:700;color:var(--navy);margin-bottom:3mm;font-size:11pt;}
+.toc ol{list-style:none;padding:0;margin:0;columns:2;column-gap:8mm;}
+.toc li{
+  font-size:9.5pt;color:var(--ink-2);margin-bottom:1.8mm;
+  break-inside:avoid;
+}
+.toc li b{color:var(--ink);font-weight:600;}
+
+/* ---------- 来源脚注 ---------- */
+.src{
+  font-size:8pt;color:var(--ink-3);word-break:break-all;
+  line-height:1.5;
+}
+.src a{color:var(--ink-3);}
+
+/* ---------- 分页 ---------- */
+.pb{page-break-before:always;}
+.nobrk{page-break-inside:avoid;}
+
+.footnote{
+  margin-top:10mm;padding-top:3mm;border-top:1px solid var(--line);
+  font-size:8pt;color:var(--ink-3);line-height:1.6;
+}
+
+.kv{display:flex;gap:3mm;margin:0 0 2mm;font-size:9.5pt;}
+.kv .k{color:var(--ink-3);min-width:26mm;font-weight:600;}
+.kv .v{color:var(--ink-2);flex:1;}
+
+.rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:6mm;height:6mm;border-radius:50%;background:var(--navy);color:#fff;
+  font-size:8.5pt;font-weight:700;margin-right:2mm;
+}
+.rank.g{background:var(--green);}
+.rank.a{background:var(--amber);}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ============================= 封面 ============================= -->
+<div class="cover">
+  <div class="kicker">JZP POWER · Market Development Playbook</div>
+  <h1>北美 + 南美<br>客户开发作战手册</h1>
+  <p class="sub">美国 · 加拿大 · 墨西哥 · 巴西 · 秘鲁 · 哥伦比亚 · 智利<br>
+  执行窗口：2026 年 10 月 — 2027 年 12 月</p>
+  <div class="meta">
+    <span><b>主体</b>　JZP POWER TRANSFORMER INC. / JIEZOU POWER</span>
+    <span><b>产品</b>　液浸式配电变压器 · 美式箱变 · 变电站变压器 · 干变</span>
+    <span><b>资质</b>　UL E541626 / E541627 · cUL · CSA · ISO · IEEE C57.12</span>
+    <span><b>编制日期</b>　2026-09-27</span>
+  </div>
+</div>
+
+<div class="callout">
+  <div class="t">本手册的三条前提</div>
+  <ol style="margin-bottom:0">
+    <li><b>结论先行，来源可查。</b>每一条关键判断都附可复查来源（见附录 A）。凡查不到公开依据的，标注为「待核实」而不是模糊带过。</li>
+    <li><b>区分事实与推断。</b>关税、交期、认证周期等会变的数字，全部注明口径与时点；估算值明确标为估算。</li>
+    <li><b>不编造联系方式。</b>目标客户清单只列可核实的机构与公开采购入口，任何未经证实的邮箱、电话一律留空。</li>
+  </ol>
+</div>
+
+<!-- ============================= 目录 ============================= -->
+<div class="toc">
+  <div class="t">目录</div>
+  <ol>
+    <li><b>0</b>　执行摘要：三条结论</li>
+    <li><b>1</b>　市场态势</li>
+    <li><b>2</b>　政策与关税地图</li>
+    <li><b>3</b>　认证准入矩阵</li>
+    <li><b>4</b>　买家地图与目标清单</li>
+    <li><b>5</b>　线索获取渠道</li>
+    <li><b>6</b>　竞争格局与我方定位</li>
+    <li><b>7</b>　开发执行系统</li>
+    <li><b>8</b>　90 天行动计划</li>
+    <li><b>A</b>　来源清单</li>
+    <li><b>B</b>　待核实清单</li>
+  </ol>
+</div>
+
+<!-- ============================= 0 ============================= -->
+<h2><span class="num">0</span>执行摘要：三条结论</h2>
+
+<p>如果这份手册只读一页，就读这一页。</p>
+
+<div class="verdict">
+  <div class="t">结论一 · 美国：产品线必须切割，不能整包推</div>
+  <p>2026-08-26 签署的行政令（编号 14420 / 14421，见附录 B）禁止「外国实体」设计、制造或供应的<b>大电力系统设备</b>被采购、进口或安装，覆盖<b>变电站变压器</b>、高压断路器、电压调节器、仪用互感器等，但<b>明确不适用于仅接入本地低压配电的设施</b>。</p>
+  <p style="margin-bottom:0">→ 我方<b>液浸式配电变压器与美式箱变落在豁免区，美国仍可正常销售</b>；<b>接入 69kV 及以上电网的变电站变压器在美国应视为不可销售</b>，该产品线的北美重心须整体转向加拿大与南美。DOE 细则预计 2026-12-24 前出台，存在追溯风险，须持续盯。</p>
+</div>
+
+<div class="verdict">
+  <div class="t">结论二 · 加拿大是当前性价比最高的市场，且是进入北美的成本最低通道</div>
+  <p style="margin-bottom:0">加拿大 8504 全系 <b>MFN 零关税</b>，2025 年钢铝附加税令（SOR/2025-154）<b>不覆盖 8504 章</b>，2026 年 1 月加中协议亦未涉及变压器。与此同时加拿大配电变压器交期已达 <b>100 周以上</b>，BC Hydro / Hydro One / Hydro-Québec 的百亿级资本计划正在释放需求，而 CSA C227.4 与 cUL 资质我方<b>已有</b>。这是全手册里「门槛最低 × 需求最旺」的组合。</p>
+</div>
+
+<div class="verdict">
+  <div class="t">结论三 · 南美按频率分梯队，不是按市场规模排序</div>
+  <p style="margin-bottom:0">巴西、墨西哥、秘鲁、哥伦比亚、厄瓜多尔是 <b>60Hz 美标体系</b>，我方 UL / cUL / CSA / IEEE C57.12 产品线<b>可直接适配，无需重新设计</b>；智利、阿根廷是 <b>50Hz 欧标体系</b>，同容量铁芯截面需加大，属可控但真实的重设计成本。因此南美第一梯队是 <b>墨西哥 → 巴西 → 秘鲁/哥伦比亚</b>，智利与阿根廷放第二轮。<b>不要用同一套图纸同时投 60Hz 与 50Hz 市场。</b></p>
+</div>
+
+<h3>0.1 还有一个必须先修的问题：你的打分模型正在压制南美线索</h3>
+
+<p>检查你现有的线索流水线配置时发现一处与新战略直接冲突的设定：</p>
+
+<table>
+  <thead><tr><th style="width:34%">文件</th><th style="width:33%">现状</th><th>后果</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><code>scripts/customs_normalize.py:278-279</code></td>
+      <td><code>TARGET_MARKETS = {"US","CA"}</code><br><code>SECONDARY_MARKETS = {"MX","PR","DO","TT","JM","BS","BB","BZ","GT","HN","PA","CR"}</code></td>
+      <td>巴西（BR）、智利（CL）、哥伦比亚（CO）、秘鲁（PE）、阿根廷（AR）、厄瓜多尔（EC）<b>两个集合都不在</b></td>
+    </tr>
+    <tr>
+      <td><code>scripts/lead_scoring.py:37-61</code></td>
+      <td>信号 3 = <b>−15 分</b>「非目标市场」，并打标签 <code>非目标市场</code></td>
+      <td>今天若导入一份巴西买家名录，<b>每一家都会被扣 15 分并打上「非目标市场」标签</b>，在分级里被系统性压到 C/D 档</td>
+    </tr>
+    <tr>
+      <td>同上</td>
+      <td>墨西哥仅按「次级美洲市场」<b>+8 分</b></td>
+      <td>与本次调研认定的「南美第一优先市场」定位不匹配</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <div class="t">这不是小事</div>
+  <p style="margin-bottom:0">你的流水线是「发现 → 打分 → 建客户条目」的唯一入口。如果权重不改，南美战略在<b>数据层面根本跑不起来</b>——线索会被自己的模型筛掉。补丁已写好，见 <code>流水线补丁/南美市场权重补丁.md</code>，含精确的代码改动位置与自测影响提示。</p>
+</div>
+
+<h3>0.2 一句话战略</h3>
+
+<div class="callout ok">
+  <div class="t">以「交期」为矛，以「三证齐备」为盾，用加拿大做现金流，用南美 60Hz 国家做增量</div>
+  <p style="margin-bottom:0">美国本土制造商的新产能集中在 <b>2027—2028 年</b>投产，2026 年 9 月到 2027 年底是<b>真实的窗口期</b>。此刻客户最在意的排序不是价格，而是：<b>交期 &gt; 认证合规 &gt; 价格 &gt; 本地服务 &gt; 品牌</b>。所有开发动作都应该围绕这个排序设计。</p>
+</div>
+
+<!-- ============================= 1 ============================= -->
+<h2 class="pb"><span class="num">1</span>市场态势</h2>
+
+<h3>1.1 美国：短缺没有缓解，只是换了形态</h3>
+
+<p>2024 年以来「变压器荒」的叙事需要更新。<b>短缺在大容量端加剧，在标准配电端略有缓解，但美式箱变是例外——它被单独判定为继续恶化。</b></p>
+
+<table>
+  <thead>
+    <tr><th style="width:26%">指标</th><th style="width:37%">2025 年</th><th>2026 年现状</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>电力变压器平均交期</td><td class="num">128 周（Wood Mackenzie Q2 2025）</td><td>大型机组最长 <b>4 年</b></td></tr>
+    <tr><td>GSU（发电机升压变）交期</td><td class="num">144 周</td><td>Q1 2026 <b>超 160 周</b>；EHV 最长 60 个月</td></tr>
+    <tr><td>标准目录配电变压器交期</td><td class="num">52 周以上（2023）</td><td>回落至 <b>26–40 周</b></td></tr>
+    <tr><td><b>三相美式箱变</b></td><td class="num">—</td><td><span class="tag no">继续恶化至 2027</span></td></tr>
+    <tr><td>价格（对比 2019）</td><td class="num">电力变 +77%，部分配电等级 +95%</td><td>近五年整体约 <b>+80%</b></td></tr>
+    <tr><td>存量老化</td><td class="num" colspan="2">超 <b>4000 万台</b>（&gt;50%）配电变压器已超设计寿命，约 55% 机龄超 33 年</td></tr>
+  </tbody>
+</table>
+<p class="src">来源：Power Magazine《Transformers in 2026》 https://www.powermag.com/transformers-in-2026-shortage-scramble-or-self-inflicted-crisis/ ；PV Magazine USA 2026-05-11 https://pv-magazine-usa.com/2026/05/11/u-s-transformer-market-faces-severe-supply-constraints-as-lead-times-extend-to-four-years/ ；distroforge 采购年报 https://distroforge.com/blog/transformer-procurement-2026/</p>
+
+<h4>需求驱动：数据中心是第一引擎</h4>
+
+<p>2019 → 2025 各类变压器需求增幅：</p>
+<ul>
+  <li><b>GSU +274%</b>　·　电力变压器 +119%　·　变电站变压器 +116%　·　配电变压器 +34%</li>
+  <li>制造业建设支出三年 <b>+96%</b>（制造业回流）</li>
+  <li>光伏与储能受 OBBBA 削减税收抵免拖累，排序下滑</li>
+</ul>
+<p class="src">来源：Power Magazine，同上。</p>
+
+<div class="callout">
+  <div class="t">这个排序对我方意味着什么</div>
+  <p style="margin-bottom:0">配电变压器 +34% 是四类里<b>最低</b>的增速——这看起来是坏消息，但它是唯一<b>政策豁免</b>的品类，而且对应的是数据中心、工商业、合作社这些<b>不受 BABA 约束</b>的商业采购。GSU 与变电站变压器增速虽高，却恰好是 EO 禁入区。<b>增速最高的市场对你关门，增速最低的市场向你敞开</b>——这是本手册最重要的一条错位判断。</p>
+</div>
+
+<h4>供给侧：新产能 2027—2028 才投产</h4>
+<ul>
+  <li>Hitachi Energy：弗吉尼亚 South Boston 4.57 亿美元 + 田纳西 Alamo 1.06 亿美元</li>
+  <li>Siemens Energy：北卡 Charlotte 4.21 亿美元（其首座美国大型变压器厂）</li>
+  <li>Eaton：南卡罗来纳州扩产</li>
+  <li>Howard Industries：2026 年 6 月宣布三县 2.36 亿美元扩张</li>
+</ul>
+<p>美国电力变压器 <b>约 80% 依赖进口</b>，配电变压器约 50%；本土产能增速仅 3–4%，而需求增速 7–9%。这个缺口<b>至少在 2027 年底前不会闭合</b>。</p>
+
+<h3>1.2 加拿大：需求旺、门槛低、竞争少</h3>
+
+<table>
+  <thead><tr><th style="width:30%">维度</th><th>情况</th></tr></thead>
+  <tbody>
+    <tr><td>市场规模</td><td>2025 年约 <b>19.58 亿美元</b> → 2030 年 26.47 亿美元；配电变压器占 <b>59.1%</b></td></tr>
+    <tr><td>交期</td><td>配电变压器 <b>100 周以上</b>；电力变压器 80–210+ 周</td></tr>
+    <tr><td>价格</td><td>2020 年以来 <b>+74%</b>；EFC 调查中 <b>67%</b> 会员称变压器供应为重大关切</td></tr>
+    <tr><td>关税</td><td><span class="tag go">8504 全系 MFN 免税</span>　钢铝附加税令不覆盖 8504 章</td></tr>
+    <tr><td>采购主体</td><td>省级公用事业：BC Hydro（十年资本计划近 <b>360 亿加元</b>）、Hydro One、Hydro-Québec、Alectra、ENMAX、EPCOR</td></tr>
+    <tr><td>竞争动态</td><td>Hitachi Energy 在魁北克 Varennes 投资 2.7 亿加元扩产，产能近三倍</td></tr>
+  </tbody>
+</table>
+<p class="src">来源：MarketsandMarkets 加拿大变压器市场 https://www.marketsandmarkets.com/Market-Reports/geography/transformer-market/canada ；SOR/2025-154 全文 https://laws-lois.justice.gc.ca/eng/regulations/SOR-2025-154/FullText.html ；Canada 关税查询 https://tariffcalc.ca/en/hs-code/8504</p>
+
+<div class="callout ok">
+  <div class="t">为什么加拿大应该排在所有动作的第一位</div>
+  <ul style="margin-bottom:0">
+    <li><b>零关税</b>——相对美国约 50% 的综合税负，这是压倒性的成本优势</li>
+    <li><b>资质已具备</b>——CSA C227.4:21 与 cUL 我方已有，不需要新投入</li>
+    <li><b>交期劣势不存在</b>——本地交期 100 周以上，我方若能 20–30 周交付，差距是数量级</li>
+    <li><b>真实门槛在资格审查而非法规</b>——省级公用事业的型式试验与供应商注册，是可以攻的流程，不是不可逾越的墙</li>
+  </ul>
+</div>
+
+<h3>1.3 南美：先定频率，再定国别</h3>
+
+<p><b>频率是产品适配性的硬约束，必须先于市场大小做判断。</b></p>
+
+<table class="wide">
+  <thead>
+    <tr><th style="width:11%">国家</th><th style="width:7%">频率</th><th style="width:14%">市场规模</th><th style="width:15%">本地制造</th><th style="width:16%">关税</th><th style="width:15%">强制认证</th><th>判断</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>墨西哥</b></td><td class="num">60Hz</td>
+      <td>变压器整体约 <b>11.99 亿美元</b>，CAGR 7.7%（电力变 10.3%）</td>
+      <td>强：Prolec GE（至 1200MVA）、Grupo Trafo、Tecnme、WEG 新厂</td>
+      <td><b>5%–35%</b>（2026 新政，非 FTA 国家）</td>
+      <td>NOM（强制）+ CFE 供应商注册</td>
+      <td><span class="tag go">第一优先</span> 产品零改造适配</td>
+    </tr>
+    <tr>
+      <td><b>巴西</b></td><td class="num">60Hz</td>
+      <td>配电变 <b>4.46 亿美元</b>，CAGR 6.0%（南美整体 10.27 亿）</td>
+      <td>强：WEG、Romagnole、Hitachi/Siemens 本地厂</td>
+      <td>NCM 8504.21 <b>II 12.6%</b>，IPI 0%；有 Ex-Tarifário 可降至 0%</td>
+      <td>INMETRO + ANEEL/ABNT</td>
+      <td><span class="tag go">第二优先</span> 交期套利窗口明确</td>
+    </tr>
+    <tr>
+      <td><b>秘鲁</b></td><td class="num">60Hz</td>
+      <td>中等，矿业 + 基建驱动</td>
+      <td>弱，依赖进口</td>
+      <td>中秘 FTA 下<b>多数 0%</b></td>
+      <td>OSINERGMIN / INACAL（口径待核实）</td>
+      <td><span class="tag go">第三优先</span> 产品最合、关税最优</td>
+    </tr>
+    <tr>
+      <td><b>哥伦比亚</b></td><td class="num">60Hz</td>
+      <td>中等，配网改造需求稳</td>
+      <td>弱</td>
+      <td>无中哥 FTA，约 <b>10% + IVA 19%</b></td>
+      <td><b>RETIE</b>（强制）</td>
+      <td><span class="tag mid">第三优先</span> 认证是主要成本</td>
+    </tr>
+    <tr>
+      <td><b>厄瓜多尔</b></td><td class="num">60Hz</td>
+      <td>小，水电/输配缺口</td>
+      <td>弱</td>
+      <td>无 FTA</td>
+      <td>本地合规</td>
+      <td><span class="tag mid">观察</span></td>
+    </tr>
+    <tr>
+      <td><b>智利</b></td><td class="num">50Hz</td>
+      <td>规模小但增速高（矿业 + 光伏）</td>
+      <td>弱</td>
+      <td>统一 <b>6%</b>，中智 FTA 下多数 0%</td>
+      <td>SEC</td>
+      <td><span class="tag mid">第二轮</span> 需 50Hz 重设计</td>
+    </tr>
+    <tr>
+      <td><b>阿根廷</b></td><td class="num">50Hz</td>
+      <td>需求存在，宏观不稳</td>
+      <td>弱</td>
+      <td>Mercosur AEC，无中阿 FTA</td>
+      <td>IRAM / ENRE</td>
+      <td><span class="tag mid">第二轮</span> 外汇已改善</td>
+    </tr>
+    <tr>
+      <td>玻利维亚 / 乌拉圭 / 巴拉圭</td><td class="num">50Hz</td>
+      <td>极小</td><td>无</td><td>高 / Mercosur</td><td>不明</td>
+      <td><span class="tag no">暂缓</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout amber">
+  <div class="t">为什么墨西哥排第一而不是巴西</div>
+  <p>巴西单一市场更大，但墨西哥有三重优势叠加：<b>① 产品零改造</b>（60Hz 美标，与 UL/cUL/CSA 体系同源）；<b>② 需求引擎明确</b>——CFE 2025–2030 年 <b>82 亿美元</b>电网投资计划，含 275 条线路、524 座变电站、2300 座变电站数字化；<b>③ 中资已有先例</b>——威胜控股 2025 年与 CFE 签下 5.52 亿元人民币供货协议并在瓜纳华托州建厂，说明 CFE 对中国供应商的接受度已被打开。</p>
+  <p style="margin-bottom:0">代价同样明确：2026 年新关税 5%–35%、NOM 强制认证、以及 CFE 2030 年 60% 本地化目标——长期必须本地化或深度绑定本地伙伴。</p>
+</div>
+
+<div class="callout warn">
+  <div class="t">南美两个必须落地前解决的不确定项</div>
+  <ol style="margin-bottom:0">
+    <li><b>巴西 INMETRO 对液浸式配电变压器究竟是强制还是自愿？</b>INMETRO 官网对该品类挂的是<b>自愿性</b>认证规程（RTAC002837），而多篇中文行业文章称 ≤300kVA 属强制。<b>这一条决定巴西是「6–12 个月门票」还是「可以先卖货」</b>，必须向巴西 OCP（认证机构）书面确认，不能靠猜。</li>
+    <li><b>巴西 2026 年加税是否覆盖我方型号？</b>GECEX 第 852/2026 号决议对 1252 项产品加税（0% 升至 7.2%，部分升至 12.6% 或 20%），2026-02-06 与 03-01 分批生效，同时给 105 项产品临时零关税豁免。NCM 查询页显示 8504.21 存在例外清单 20% 税率，与标准 TEC 12.6% 冲突。<b>必须按具体 NCM 逐一核对。</b></li>
+  </ol>
+</div>
+
+<!-- ============================= 2 ============================= -->
+<h2 class="pb"><span class="num">2</span>政策与关税地图</h2>
+
+<p>这是全手册最容易出错、也最影响报价的一章。<b>2026 年美国的关税体系经历了一次结构性重构，2025 年的任何关税结论都已经失效。</b></p>
+
+<h3>2.1 美国：2026 年关税重构时间线</h3>
+
+<table>
+  <thead><tr><th style="width:20%">时间</th><th style="width:44%">事件</th><th>影响</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="num">2026-02-20</td>
+      <td>最高法院 6:3 判决 <i>Learning Resources v. Trump</i>：IEEPA 不授权总统征税</td>
+      <td><b>对华芬太尼关税与「对等关税」自 02-24 停止征收</b></td>
+    </tr>
+    <tr>
+      <td class="num">2026-02-24 → 07-24</td>
+      <td>Section 122 全球 10% 临时附加税（150 天上限）</td>
+      <td>过渡期安排，已到期</td>
+    </tr>
+    <tr>
+      <td class="num">2026-04-02 签署<br>04-06 生效</td>
+      <td><b>Section 232（Proclamation 11021）明确覆盖变压器</b></td>
+      <td>见下方税率表——<b>本条是当前对我方影响最大的规则</b></td>
+    </tr>
+    <tr>
+      <td class="num">2026-07-24 起</td>
+      <td>新 Section 301「强迫劳动」关税，中国 <b>12.5%</b>；<b>明确不与 Section 232 覆盖商品叠加</b></td>
+      <td>因变压器已被 232 覆盖，<b>12.5% 不再叠加</b>——这是相对未获 232 覆盖品类的一项成本优势</td>
+    </tr>
+    <tr>
+      <td class="num">持续有效</td>
+      <td>老 Section 301（List 1–3）25% 全额有效</td>
+      <td>不可豁免</td>
+    </tr>
+  </tbody>
+</table>
+<p class="src">来源：BDO 税务快讯 https://www.bdo.com/insights/tax/supreme-court-invalidates-ieepa-tariffs-administration-replaces-with-new-surcharge-what-importers ；Global Trade Alert https://www.globaltradealert.org/blog/from-ieepa-to-section-122 ；USTR 2026-07 事实清单 https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/july/fact-sheet-ustr-section-301-action-response-failure-60-economies-ban-imports-produced-forced-labor ；Section 232 对电网设备的影响 https://distroforge.com/blog/section-232-tariff-grid-equipment-procurement-impact/</p>
+
+<h4>按产品线的税负估算</h4>
+
+<table>
+  <thead>
+    <tr><th style="width:19%">HTS 编码</th><th style="width:22%">对应产品</th><th style="width:14%">Section 232 档位</th><th style="width:22%">综合税负估算</th><th>备注</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="num">8504.21.00</td>
+      <td>液浸式配电变 ≤650kVA</td>
+      <td><b>25%</b>（Annex I-B，全额完税价格）</td>
+      <td><b>≈50%</b><br>MFN 0% + 301 25% + 232 25%</td>
+      <td rowspan="2">我方<b>主力品类</b></td>
+    </tr>
+    <tr>
+      <td class="num">8504.22.00</td>
+      <td>液浸式配电变 &gt;650kVA ≤10,000kVA</td>
+      <td><b>25%</b>（Annex I-B）</td>
+      <td><b>≈50%</b></td>
+    </tr>
+    <tr>
+      <td class="num">8504.23.00</td>
+      <td>液浸式 &gt;10,000kVA</td>
+      <td><b>15%</b>（Annex III）</td>
+      <td><b>≈41.6%</b><br>MFN 1.6% + 301 25% + 232 15%</td>
+      <td><span class="tag no">2028-01-01 回到 25%</span> 届时约 <b>51.6%</b></td>
+    </tr>
+    <tr>
+      <td class="num">8504.33.00 / 8504.32.00</td>
+      <td>其他变压器（配电档）</td>
+      <td><b>25%</b>（Annex I-B）</td>
+      <td><b>≈50%</b></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td class="num">8504.34.00</td>
+      <td>干式 &gt;500kVA</td>
+      <td><b>15%</b>（Annex III）</td>
+      <td>≈41.6%</td>
+      <td>2028-01-01 回到 25%</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <div class="t">这是估算值，必须由持牌报关行按 10 位 HTS 核定</div>
+  <p style="margin-bottom:0">上表基于公开公告与 HTS 编码推定，<b>不是报关结论</b>。钢/铝衍生品 232 是否叠加、原产地规则的具体适用，都需要报关行按实际申报要素确认。<b>在拿到书面税则意见之前，不要向客户报出承诺性的到岸价。</b></p>
+</div>
+
+<div class="callout amber">
+  <div class="t">2027-12-31 是一个真实的截止日</div>
+  <p style="margin-bottom:0">8504.23.00（&gt;10,000kVA）与 8504.34.00 的 15% 档位 <b>2027-12-31 到期，2028-01-01 自动回到 25%</b>。对大于 10MVA 的液浸式变压器，这意味着<b>约 10 个百分点的成本跳升</b>。如果手上有此类订单管线，应主动推动客户在 2027 年内完成清关，并把「锁定 15% 档位」作为谈判筹码——这是有时限的、真实的商业价值，不是话术。</p>
+</div>
+
+<h4>报价纪律：报落地成本，不报 FOB</h4>
+
+<p>在约 50% 的综合税负下，继续用 FOB 报价会让客户在清关环节产生巨大的预期落差，直接损害信任。建议报价结构改为：</p>
+<ul>
+  <li><b>必报</b>：FOB 价 + 关税估算（注明按当期税则）+ 海运 + 内陆运输 + 保险 = <b>DDP 参考价</b></li>
+  <li><b>必注</b>：「关税按 &lt;日期&gt; 生效税则估算，实际以清关时税则为准」</li>
+  <li><b>可选</b>：提供「客户自行清关」与「我方 DDP」两个版本，让客户比较——很多北美客户有自己的报关行和税则意见，让他们自己核反而更快建立信任</li>
+</ul>
+
+<h3>2.2 美国：政策禁入区（比关税更硬）</h3>
+
+<table>
+  <thead><tr><th style="width:22%">规则</th><th style="width:30%">覆盖范围</th><th>对我方的影响</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><b>EO 14420 / 14421</b><br><span class="src">2026-08-26 签署</span></td>
+      <td>禁止与 24 个受制裁/武器禁运国家（含中国）关联主体设计、制造、供应的<b>大电力系统设备</b>被采购、进口、转让或安装：变电站变压器、高压断路器、电压调节器、仪用互感器等</td>
+      <td><b>关键边界：明确不适用于仅接入本地低压配电的设施。</b><br>→ 配电变 / 美式箱变 <span class="tag go">可做</span><br>→ 接入 ≥69kV 电网的变电站变 <span class="tag no">不可做</span><br>DOE 细则约 2026-12-24 出台，<b>可设预审白名单与缓解措施，须持续跟踪</b></td>
+    </tr>
+    <tr>
+      <td><b>BABA</b><br>（Build America, Buy America）</td>
+      <td>联邦资助项目需美国制造 + 组件成本 &gt;55%；FHWA 项目 2025-10-01 起要求美国总装，2026-10-01 起适用 55% 门槛</td>
+      <td><span class="tag no">中国产品实质出局</span>　但<b>商业采购不受约束</b>——合作社、市政、EPC、分销商、数据中心均不受 BABA 限制</td>
+    </tr>
+    <tr>
+      <td><b>FEOC 规则</b><br>（OBBBA 挂靠 45X/48E）</td>
+      <td>2026 年非 FEOC 含量门槛 60%，2030 年 85%</td>
+      <td>影响享受税收抵免的新能源项目采购，<b>数据中心与储能项目须单独核实</b></td>
+    </tr>
+  </tbody>
+</table>
+<p class="src">来源：EO 14420 分析 https://sanctionsnews.bakermckenzie.com/us-government-issues-executive-order-14420-to-secure-us-bulk-power-system/ ；PV Magazine 报道 https://pv-magazine-usa.com/2026/08/27/executive-order-bans-foreign-produced-transformers-inverters-and-circuit-breakers-for-u-s-power-grid/ ；BABA 2025-2026 规则变更 https://www.trussfaber.com/news/build-america-buy-america-2025-2026-rule-changes</p>
+
+<div class="callout">
+  <div class="t">把禁入区变成销售话术</div>
+  <p style="margin-bottom:0">不要回避「中国产」这件事——把它讲清楚反而建立信任。推荐表述：「我们的大容量变电站产品线目前不适合美国市场，因为我们无法满足现行的大电力系统设备要求。但我们的配电变压器与美式箱变属于本地配电范畴，不受该限制，并且我们已经持有 UL 与 CSA 认证。」<b>主动说明边界，比含糊其辞更能让工程出身的采购经理信任你。</b></p>
+</div>
+
+<h3>2.3 加拿大：目前对中国产变压器几乎零壁垒</h3>
+<ul>
+  <li>8504 全系 <b>MFN 免税</b>（来源：https://tariffcalc.ca/en/hs-code/8504 ）</li>
+  <li>钢铝附加税令 SOR/2025-154（2025-07-31 生效）的 25% 附加税<b>仅覆盖 72/73/74/76 章，不含 8504</b>（来源：https://laws-lois.justice.gc.ca/eng/regulations/SOR-2025-154/FullText.html ）</li>
+  <li>2026-01-16 加中初步协议涉及 EV 关税（100% → 6.1%）与钢铝减免延长，<b>未涉及变压器</b>（来源为贸易商分析，细节建议以 CBSA / 财政部公告复核）</li>
+</ul>
+
+<h3>2.4 南美：关税与认证</h3>
+
+<table class="wide">
+  <thead><tr><th style="width:11%">国家</th><th style="width:26%">关税</th><th style="width:30%">强制认证</th><th>实操要点</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><b>墨西哥</b></td>
+      <td>2026-04-23 总统令：185 个税号加征 <b>5%–35%</b>，含「电气材料」；2026-01-01 生效的 LIGIE 改革覆盖 1463 税号</td>
+      <td><b>NOM</b>（强制）+ CFE 供应商注册<br><span class="tag mid">行业文章称 UL/cUL/CSA 标记不被承认 —— 待核实</span></td>
+      <td>走 PROSEC 行业促进计划可优化税负；长期须考虑本地组装以应对 CFE 60% 本地含量目标</td>
+    </tr>
+    <tr>
+      <td><b>巴西</b></td>
+      <td>NCM 8504.21 <b>II 12.6%</b>、IPI 0%；有 <b>Ex-Tarifário</b> 可降至 0%</td>
+      <td><b>INMETRO</b> + ANEEL/ABNT<br>初认证 R$5,000–150,000+，证书 3 年，年维护为初认证的 <b>20%–40%</b>，现实周期 <b>90–120 天</b></td>
+      <td><span class="tag go">关键利好</span> ILAC 体系内的 UL/CSA 报告<b>可被 OCP 评估复用</b>，只补巴西特有测试，显著降本。<b>这是我方相对纯中国同行的最大成本优势。</b></td>
+    </tr>
+    <tr>
+      <td><b>智利</b></td>
+      <td>统一 6%，中智 FTA 下多数 0%</td>
+      <td>SEC 强制认证清单</td>
+      <td>50Hz，需重设计；付款条件最优</td>
+    </tr>
+    <tr>
+      <td><b>秘鲁</b></td>
+      <td>中秘 FTA 下多数 <b>0%</b>（2024-11 签署升级议定书）</td>
+      <td>OSINERGMIN / INACAL<br><span class="tag mid">具体法规编号与流程未获证实</span></td>
+      <td>须直接查 OSINERGMIN / INACAL 官网确认，不要采信二手中文资料</td>
+    </tr>
+    <tr>
+      <td><b>哥伦比亚</b></td>
+      <td>无中哥 FTA，约 10% + IVA 19%</td>
+      <td><b>RETIE</b>（强制技术法规，现行 RETIE 2024，2025-02-26 发布修订草案）</td>
+      <td>认证是主要成本项</td>
+    </tr>
+    <tr>
+      <td><b>阿根廷</b></td>
+      <td>Mercosur AEC，无中阿 FTA</td>
+      <td>IRAM / ENRE</td>
+      <td>外汇管制已显著改善：2025-04 起进口可自清关日起通过 MLC 支付，SIRA 已废止</td>
+    </tr>
+  </tbody>
+</table>
+<p class="src">来源：White &amp; Case 墨西哥 2026 关税令分析 https://www.whitecase.com/insight-alert/mexico-issues-presidential-decree-imposing-tariffs-185-tariff-lines-sectors ；巴西 NCM 查询 https://buscadorncm.com.br/ncm/85042100 ；INMETRO 液浸配电变压器能效 https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/programa-brasileiro-de-etiquetagem/tabelas-de-eficiencia-energetica/transformadores-de-distribuicao-em-liquido-isolante ；阿根廷外汇管制解除 https://www.dentons.com/en/insights/alerts/2025/april/16/removal-of-foreign-exchange-controls-in-argentina</p>
+
+<h3>2.5 能效法规：2029 年是一个硬节点</h3>
+
+<p>美国 DOE 2024 年 4 月最终规则（10 CFR 431）采用 <b>GOES + 非晶双路径</b>，<b>2029 年 4 月生效</b>。2026-06-15 DOE 发布 RFI（docket EERE-2026-BT-STD-0133）拟修订甚至撤销该规则，EEI、APPA、NRECA、NEMA、ERMCO 均反对撤销（EEI 仅要求延长合规期）。</p>
+
+<div class="callout">
+  <div class="t">建议：一次性按最严版本设计产品线</div>
+  <p style="margin-bottom:0">当前状态是「2024 规则仍有效，但存在不确定性」。与其赌撤销，不如<b>直接按 GOES + 非晶双路径设计</b>——若规则保留，你已合规；若撤销，你的产品在能效上是超配的，这本身是卖点。加拿大同步对齐 NRCan《能源效率法规》与 CSA C802 系列。</p>
+</div>
+<p class="src">来源：Utility Dive https://www.utilitydive.com/news/doe-mulls-changes-to-biden-era-transformer-rule-raising-utility-concerns/826440/</p>
+
+<!-- ============================= 3 ============================= -->
+<h2 class="pb"><span class="num">3</span>认证准入矩阵</h2>
+
+<p>把「我们已经有什么」和「每个市场还缺什么」摆在一起看，才能算清进入成本。</p>
+
+<table class="wide">
+  <thead>
+    <tr><th style="width:10%">市场</th><th style="width:8%">频率</th><th style="width:24%">标准体系</th><th style="width:22%">强制认证</th><th style="width:16%">我方现状</th><th>缺口与动作</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>美国</b></td><td class="num">60Hz</td>
+      <td>ANSI/IEEE C57.12.00 / .28 / .34 / .90；UL 1561 / 1562</td>
+      <td>UL（CCN XPLH 等）+ DOE 能效</td>
+      <td><span class="tag go">UL E541626 / E541627<br>ECD Letter（2024-11）</span></td>
+      <td>无认证缺口。仅需确认 2029-04 能效规则的最终形态</td>
+    </tr>
+    <tr>
+      <td><b>加拿大</b></td><td class="num">60Hz</td>
+      <td>CSA C227.4:21（三相美变）、C227.3（单相柱上）、C22.3 No.1（2025 版，强化气候韧性）</td>
+      <td><b>CSA 强制</b>（无 CSA 认证不能合法安装，责任落在业主）+ NRCan 能效（CSA C802 系列）</td>
+      <td><span class="tag go">cUL + CSA 已有</span></td>
+      <td>无认证缺口。<b>真实门槛是省级公用事业的型式试验与供应商资格审查</b></td>
+    </tr>
+    <tr>
+      <td><b>墨西哥</b></td><td class="num">60Hz</td>
+      <td>NOM 体系 + CFE 技术规范</td>
+      <td><b>NOM（强制）</b> + CFE 供应商注册</td>
+      <td><span class="tag mid">产品适配，认证未办</span></td>
+      <td>① 确认 UL/cUL/CSA 标记是否被 NOM 承认（<b>关键，直接决定成本</b>）② 完成 CFE 供应商注册</td>
+    </tr>
+    <tr>
+      <td><b>巴西</b></td><td class="num">60Hz</td>
+      <td>ABNT NBR 系列 + ANEEL 规范</td>
+      <td><b>INMETRO</b>（强制/自愿待确认）+ ANEEL</td>
+      <td><span class="tag mid">产品适配，认证未办</span></td>
+      <td>① <b>书面确认 INMETRO 对该品类的强制性</b> ② 用 ILAC 体系内的 UL/CSA 报告申请 OCP 测试复用 ③ 核实 Ex-Tarifário 是否覆盖我方型号</td>
+    </tr>
+    <tr>
+      <td><b>秘鲁</b></td><td class="num">60Hz</td>
+      <td>NTP 系列</td>
+      <td>OSINERGMIN / INACAL</td>
+      <td><span class="tag mid">产品适配，认证未办</span></td>
+      <td>法规口径未证实，须直查官方</td>
+    </tr>
+    <tr>
+      <td><b>哥伦比亚</b></td><td class="num">60Hz</td>
+      <td>RETIE 2024</td>
+      <td><b>RETIE（强制）</b></td>
+      <td><span class="tag mid">产品适配，认证未办</span></td>
+      <td>RETIE 修订草案 2025-02 已发布，须跟踪生效版本</td>
+    </tr>
+    <tr>
+      <td><b>智利</b></td><td class="num">50Hz</td>
+      <td>IEC 体系</td>
+      <td>SEC 强制认证清单</td>
+      <td><span class="tag no">需重设计</span></td>
+      <td>50Hz 铁芯截面重算（同容量约 +20%），损耗指标重算</td>
+    </tr>
+    <tr>
+      <td><b>阿根廷</b></td><td class="num">50Hz</td>
+      <td>IRAM 体系</td>
+      <td>IRAM / ENRE</td>
+      <td><span class="tag no">需重设计</span></td>
+      <td>同上</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout ok">
+  <div class="t">一个被低估的资产：ILAC 互认</div>
+  <p style="margin-bottom:0">我方已持有的 UL / cUL / CSA 报告属于 <b>ILAC 互认体系</b>。巴西 INMETRO 的 OCP 可以评估并复用这些报告，只补做巴西特有测试项目。<b>这意味着我方进入巴西的认证成本显著低于只有 CE 或什么认证都没有的同行。</b>这是可以写进开发信、也可以写进报价谈判的具体优势，不是泛泛的「我们质量好」。</p>
+</div>
+
+<!-- ============================= 4 ============================= -->
+<h2 class="pb"><span class="num">4</span>买家地图与目标清单</h2>
+
+<h3>4.1 北美：五类买家，五种打法</h3>
+
+<table class="wide">
+  <thead>
+    <tr><th style="width:15%">类型</th><th style="width:16%">规模特征</th><th style="width:18%">准入门槛</th><th style="width:22%">决策链条</th><th>打法</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>投资者持有公用事业</b><br>IOU</td>
+      <td>单量最大</td>
+      <td><span class="tag no">最高</span>资格审查 1–3 年</td>
+      <td>采购部 + 工程部 + 财务，多轮评审</td>
+      <td>长期战。先入供应商名录，用小型项目建立履约记录。<b>不适合作为 90 天目标</b></td>
+    </tr>
+    <tr>
+      <td><b>农村电力合作社</b><br>NRECA，约 900 家</td>
+      <td>中量、数量多</td>
+      <td><span class="tag go">最低</span>走 NRECA 战略采购</td>
+      <td>总工程师或总经理直接决策</td>
+      <td><b>首选目标。</b>决策链短、交期敏感、不受 BABA 约束。公开采购机会：https://www.electric.coop/sourcing-opportunities</td>
+    </tr>
+    <tr>
+      <td><b>市政公用事业</b><br>APPA，2000+ 机构</td>
+      <td>分散小单</td>
+      <td><span class="tag mid">低-中</span></td>
+      <td>市政采购部门 + 议会批准</td>
+      <td>批量触达，单量小但复购稳。名录按州公开：https://www.publicpower.org/our-members</td>
+    </tr>
+    <tr>
+      <td><b>EPC / 分销商 / OEM</b><br>NAED 体系</td>
+      <td>项目制</td>
+      <td><span class="tag mid">中</span>价格与交期主导</td>
+      <td>采购经理 + 项目经理</td>
+      <td><b>见效最快。</b>不受 BABA 约束，认交期，愿意试新品牌。适合作为破冰突破口</td>
+    </tr>
+    <tr>
+      <td><b>数据中心开发商</b></td>
+      <td>项目大、增速最快</td>
+      <td><span class="tag mid">中</span>技术评审严格</td>
+      <td>业主 + 总包 + 顾问</td>
+      <td>需求最旺、对美标认证接受度高。<b>UL/cUL 是核心卖点</b>；须核实 FEOC 规则适用性</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <div class="t">北美打法的核心判断</div>
+  <p style="margin-bottom:0"><b>不要一上来就攻 IOU。</b>IOU 的资格审查周期是 1–3 年，会消耗掉整个窗口期。真正的机会在<b>合作社 + 市政 + EPC/分销商 + 数据中心</b>这四类：它们不受 BABA 约束、决策链短、交期敏感，且正好是本土产能最紧张、被大厂排产挤掉的客户群。加拿大侧则相反——<b>省级公用事业就是主战场</b>，因为 CSA 资质我方已有，门槛落在可攻的资格审查流程上。</p>
+</div>
+
+<h3>4.2 南美：首批目标客户</h3>
+
+<p>完整清单（62 家机构 + 9 个协会 + 9 个采购平台）见 <code>线索资产/南美首批目标客户.csv</code>，已按你现有流水线的 <code>manual</code> 列名预设格式化，可直接导入。以下为分层摘要。</p>
+
+<h4>第一梯队：有公开供应商注册入口，先注册再谈</h4>
+
+<table class="wide">
+  <thead><tr><th style="width:9%">国家</th><th style="width:26%">机构</th><th style="width:14%">类型</th><th>采购/注册入口</th></tr></thead>
+  <tbody>
+    <tr><td>墨西哥</td><td>CFE（Comisión Federal de Electricidad）</td><td>国有公用事业</td><td>https://seg.cfe.mx/concursoscontratos/Pages/default.aspx<br>供应商登记 https://msc.cfe.mx/Aplicaciones/NCFE/Concursos/Proveedor/PadronProveedores</td></tr>
+    <tr><td>巴西</td><td>CEMIG</td><td>州属公用事业</td><td>https://www.cemig.com.br/fornecedores/</td></tr>
+    <tr><td>巴西</td><td>CPFL Energia</td><td>民营公用事业</td><td>https://www.grupocpfl.com.br/institucional/seja-um-fornecedor-cpfl<br><b>公开供应商注册邮箱：{{CONTACT_EMAIL}}</b></td></tr>
+    <tr><td>巴西</td><td>Neoenergia（Iberdrola 系）</td><td>民营公用事业</td><td>https://www.neoenergia.com/fornecedores</td></tr>
+    <tr><td>巴西</td><td>Equatorial Energia</td><td>民营公用事业</td><td>https://www.equatorialenergia.com.br/seja-um-fornecedor/</td></tr>
+    <tr><td>巴西</td><td>ISA Energia Brasil（ISA CTEEP）</td><td>输电特许经营商</td><td>https://www.isaenergiabrasil.com.br/en/</td></tr>
+    <tr><td>秘鲁</td><td>Luz del Sur</td><td>民营配电</td><td>https://www.luzdelsur.pe/es/Empresas/Proveedores</td></tr>
+    <tr><td>秘鲁</td><td>Grupo Distriluz</td><td>国有配电集团</td><td>https://aplicaciones.distriluz.com.pe/Proveedor/</td></tr>
+    <tr><td>哥伦比亚</td><td>ISA Intercolombia</td><td>输电</td><td>https://colombia.isaenergia.com/isaintercolombia/proveedores/</td></tr>
+    <tr><td>哥伦比亚</td><td>Celsia（Grupo Argos）</td><td>民营公用事业</td><td>https://www.celsia.com/es/quienes-somos/proveedores/</td></tr>
+    <tr><td>智利</td><td>Transelec</td><td>输电</td><td>https://www.transelec.cl/portal-de-abastecimiento/</td></tr>
+    <tr><td>智利</td><td>Colbún / AES Andes</td><td>发电</td><td>https://proveedores.colbun.cl/　·　https://proveedores-andes.cl/</td></tr>
+  </tbody>
+</table>
+
+<h4>第二梯队：渠道优先，比一家家敲 EPC 快</h4>
+
+<p><b>Sonepar 系是最值得投入的单一渠道</b>——它在墨西哥、巴西、哥伦比亚、智利四国都有分支，手里握着工业终端客户，而且它本身不生产变压器，与我方无竞争关系。</p>
+<ul>
+  <li>Sonepar México　https://www.sonepar.com/en/explore-sonepar/sonepar-in-mexico</li>
+  <li>Sonepar Brasil　https://www.sonepar.com.br/</li>
+  <li>Sonepar Chile　https://sonepar.cl/empresa/</li>
+  <li>PROMELSA（秘鲁）　https://www.promelsa.com.pe/</li>
+  <li>Dielco（哥伦比亚，明确经营 transformadores）　https://www.dielco.co/</li>
+  <li>Rexel México　https://www.rexel.com/en</li>
+</ul>
+
+<h4>第三梯队：高单价终端</h4>
+
+<p>智利与秘鲁的铜矿（Codelco、Minera Escondida、Collahuasi、Antofagasta Minerals、Las Bambas、Buenaventura、Volcan）、巴西的 Vale、哥伦比亚的 Cerrejón 与 Drummond、墨西哥的 Grupo México 与 CEMEX。<b>矿区配电变压器单价高、复购强</b>，但智利是 50Hz，须先确认客户是否接受 60Hz 机型或要求定制。</p>
+
+<h4>公共采购平台（均无官方英文界面）</h4>
+
+<table>
+  <thead><tr><th style="width:12%">国家</th><th style="width:26%">平台</th><th>网址</th></tr></thead>
+  <tbody>
+    <tr><td>巴西</td><td>PNCP / Compras.gov.br</td><td>https://pncp.gov.br/app/editais　·　https://www.gov.br/compras/pt-br</td></tr>
+    <tr><td>墨西哥</td><td>ComprasMX / CFE SEG</td><td>https://comprasmx.buengobierno.gob.mx/　·　https://seg.cfe.mx/concursoscontratos/</td></tr>
+    <tr><td>智利</td><td>Mercado Público（ChileCompra，有开放 API）</td><td>https://www.mercadopublico.cl/</td></tr>
+    <tr><td>哥伦比亚</td><td>SECOP II</td><td>https://www.colombiacompra.gov.co/secop/secop-ii</td></tr>
+    <tr><td>秘鲁</td><td>SEACE</td><td>https://prod1.seace.gob.pe/portal/</td></tr>
+    <tr><td>阿根廷</td><td>COMPR.AR</td><td>https://comprar.gob.ar/</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <div class="t">招标监控的语言现实</div>
+  <p style="margin-bottom:0">以上平台<b>全部没有官方英文界面</b>。做招标监控必须有西语/葡语关键词（如 <i>transformador de distribución</i> / <i>transformador a óleo</i> / <i>licitación</i> / <i>pregão eletrônico</i>），或购买第三方聚合服务。<b>这是进入南美的隐性人力成本，必须计入预算</b>，不要假设可以用英文覆盖。</p>
+</div>
+
+<h3>4.3 你现有线索池的二次利用</h3>
+
+<p>你手上已有 <b>2107 条</b>打分线索与 <b>34 家</b>客户条目，其中大量是美加的电气分销商、EPC 与 OEM。这批数据在本次战略里有两个尚未被利用的用途：</p>
+<ol>
+  <li><b>加拿大深挖。</b>现有客户与线索里加拿大占比不低（CONNECT ATLANTIC、GE PROLEC CANADA、HAMMOND、HITACHI ENERGY CANADA、REXEL CANADA、VIRGINIA TRANSFORMER CANADA 等）。在加拿大零关税的背景下，<b>这批人应该被重新分级</b>——他们的实际价值高于当前评分。</li>
+  <li><b>用美加客户做南美背书。</b>南美买家对「你有没有在北美卖过」非常敏感。你现有的成交记录（AC Tesla 1000kVA 变电站变 + 25kVA 单相美变、Wilson High Voltage、Black &amp; McDonald、Domino Highvoltage 等）<b>是可以合法引用的北美业绩</b>。前提是取得客户同意——见第 7 章的品牌授权流程。</li>
+</ol>
+
+<!-- ============================= 5 ============================= -->
+<h2 class="pb"><span class="num">5</span>线索获取渠道</h2>
+
+<h3>5.1 海关与贸易数据平台</h3>
+
+<table class="wide">
+  <thead>
+    <tr><th style="width:14%">平台</th><th style="width:16%">覆盖</th><th style="width:20%">变压器可用性</th><th style="width:16%">价格量级</th><th>评价</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>ImportYeti</b></td>
+      <td>仅美国海运提单，约 7 亿条，日更</td>
+      <td>可按 HS 8504 或关键词搜进口商</td>
+      <td>免费版可用<br>付费约 <b>$600/用户/年</b></td>
+      <td><span class="tag go">立即用</span> 门槛最低。免费版无联系方式，仅美国、仅海运</td>
+    </tr>
+    <tr>
+      <td><b>Volza</b></td>
+      <td>200+ 国</td>
+      <td>HS 8504 全球约 <b>30.9 万条</b>进口记录、<b>4.8 万买家</b>；美国变压器买家 14,557 家</td>
+      <td>未查到公开价</td>
+      <td>覆盖最广含南美；数据质量参差，<b>先用试用验证</b></td>
+    </tr>
+    <tr>
+      <td><b>Trademo Intel</b></td>
+      <td>含 LATAM：巴西、智利、阿根廷、哥伦比亚、厄瓜多尔</td>
+      <td>可查</td>
+      <td>未查到公开价</td>
+      <td><span class="tag info">南美首选</span> 南美覆盖是核心亮点</td>
+    </tr>
+    <tr>
+      <td>Veritrade</td><td>50+ 国，拉美为主</td><td>可查</td><td>未查到公开价</td><td>拉美强，可作 Trademo 的比价对象</td>
+    </tr>
+    <tr>
+      <td>52wmb / 纽佰德</td><td>60+ 国，约 3 天更新</td><td>可查</td><td>中文平台，价格较低</td><td>中文界面、含联系人</td>
+    </tr>
+    <tr>
+      <td>Panjiva (S&amp;P) / Descartes Datamyne</td><td>全球企业级</td><td>可查</td><td>最贵档</td><td>性价比低，适合大企业</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout amber">
+  <div class="t">南美提单数据的真实情况</div>
+  <p>数据商口径下，开放进口海关数据的南美国家包括<b>阿根廷、巴西、哥伦比亚、智利、秘鲁、厄瓜多尔、巴拉圭、巴拿马、乌拉圭、委内瑞拉、玻利维亚</b>。但「开放」不等于「免费企业级明细」——巴西官方 Comex Stat 免费提供 NCM 级统计，<b>不含企业名</b>。</p>
+  <p style="margin-bottom:0"><b>加拿大不在开放名单</b>，无提单级数据，只能拿 HS 级统计。<b>注意区分两个不同的加拿大数据库</b>：ISED 的<b>加拿大进口商数据库（CID）</b>公布主要进口商名称 + HS6 + 城市/省份（这是你现有 <code>canada_cid</code> 适配器用的那个，可用）；而 ISED 的 REL/SMS 数据库是<b>无线电设备认证库</b>，与变压器无关，不要误用。</p>
+</div>
+
+<h3>5.2 免费官方数据源</h3>
+
+<table>
+  <thead><tr><th style="width:26%">来源</th><th style="width:30%">网址</th><th style="width:22%">能拿到</th><th>拿不到</th></tr></thead>
+  <tbody>
+    <tr><td>USA Trade Online</td><td>usatradeonline.census.gov</td><td>HS 10 位 / 国别 / 月度值量</td><td rowspan="3">进口商名、提单明细</td></tr>
+    <tr><td>Census Trade API</td><td>api.census.gov/data/timeseries/intltrade/imports/hs</td><td>同上，可批量</td></tr>
+    <tr><td>USITC DataWeb</td><td>dataweb.usitc.gov/trade</td><td>HTS / SITC 多口径</td></tr>
+    <tr><td>加拿大 ISED 进口商数据库</td><td>ised-isde.canada.ca/site/ised/en/research-and-business-intelligence/canadian-importers-database</td><td><b>主要进口商名称 + HS6 + 省份</b></td><td>票数、金额、日期、供应商</td></tr>
+    <tr><td>巴西 Comex Stat</td><td>comexstat.mdic.gov.br</td><td>NCM 级统计</td><td>企业名</td></tr>
+  </tbody>
+</table>
+
+<h3>5.3 买家名录与行业协会</h3>
+
+<table>
+  <thead><tr><th style="width:22%">区域</th><th style="width:32%">组织</th><th>网址 / 用途</th></tr></thead>
+  <tbody>
+    <tr><td>美国</td><td>NRECA 会员名录</td><td>https://www.electric.coop/our-organization/nreca-member-directory　（配电合作社）</td></tr>
+    <tr><td>美国</td><td>APPA 公共电力会员</td><td>https://www.publicpower.org/our-members　（<b>按州列出全部市政公用事业</b>）</td></tr>
+    <tr><td>加拿大</td><td>Electricity Canada 会员名录</td><td>https://www.electricity.ca/membership/list-of-members/</td></tr>
+    <tr><td>墨西哥</td><td>CANAME（电气制造商会）</td><td>https://caname.org.mx/　·　会员目录 https://catalogo.caname.org.mx/directorio.php</td></tr>
+    <tr><td>巴西</td><td>ABINEE（电气电子工业协会）</td><td>https://www.abinee.org.br/</td></tr>
+    <tr><td>哥伦比亚</td><td>CCEnergía</td><td>https://www.ccenergia.org.co/directorio-comercializadoras/　（<b>直接提供电气材料分销商名录</b>）</td></tr>
+    <tr><td>智利</td><td>AIE（电气电子工业协会）</td><td>https://aie.cl/</td></tr>
+    <tr><td>秘鲁</td><td>SNI / SNMPE</td><td>https://sni.org.pe/　·　https://www.snmpe.org.pe/</td></tr>
+  </tbody>
+</table>
+
+<h3>5.4 最被低估的免费渠道：展会参展商名录</h3>
+
+<div class="callout ok">
+  <div class="t">一份名单同时解决「买家」和「竞对」两个问题</div>
+  <p style="margin-bottom:0">电力行业展会的参展商名录<b>公开可查、可导出</b>。它同时给你两样东西：参展的<b>电气分销商与 EPC</b>（潜在买家），以及参展的<b>中国同行</b>（DISTRIBUTECH 2026 有 28–32 家中国展商，可直接看到竞对的产品定位与宣传口径）。<b>这是零成本获取竞对情报的合法途径。</b></p>
+</div>
+
+<table>
+  <thead><tr><th style="width:30%">展会</th><th style="width:24%">时间 / 地点</th><th>名录入口</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><b>NRECA PowerXchange &amp; TechAdvantage 2027</b></td>
+      <td>2027-02-12 ~ 17<br>圣迭戈</td>
+      <td>https://s23.a2zinc.net/clients/Kenworthy/TA2026/Public/Exhibitors.aspx</td>
+    </tr>
+    <tr>
+      <td><b>DISTRIBUTECH 2027</b></td>
+      <td>2027-03-01 ~ 04<br>亚特兰大 Georgia World Congress Center</td>
+      <td>trulista.com / expogage.com（2026 届 608–1037 家展商）</td>
+    </tr>
+    <tr>
+      <td>IEEE PES T&amp;D</td>
+      <td>2026 芝加哥（已结束）<br>下一届 2028</td>
+      <td>https://td26.mapyourshow.com/8_0/exhview/index.cfm?boothtypeid=10</td>
+    </tr>
+    <tr>
+      <td>Electricity Transformation Canada 2026</td>
+      <td>2026-10-19 ~ 21<br>多伦多 Enercare Centre</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>巴西 FIEE</td>
+      <td>—</td>
+      <td>https://www.fiee.com.br/en-us.html</td>
+    </tr>
+    <tr>
+      <td>哥伦比亚 FISE 2026</td>
+      <td>2026-04-22 ~ 24<br>麦德林</td>
+      <td>https://fise.co/</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5.5 招标与采购公告</h3>
+
+<table>
+  <thead><tr><th style="width:18%">区域</th><th style="width:30%">平台</th><th>网址</th></tr></thead>
+  <tbody>
+    <tr><td>美国联邦</td><td>SAM.gov</td><td>https://sam.gov/</td></tr>
+    <tr><td>美国公用事业</td><td>多数自建门户，无统一入口</td><td>合作社走 https://www.electric.coop/sourcing-opportunities</td></tr>
+    <tr><td>加拿大</td><td>MERX（全国公共招标）</td><td>merx.com</td></tr>
+    <tr><td>南美六国</td><td>见 4.2 节表格</td><td>均无英文界面</td></tr>
+  </tbody>
+</table>
+
+<h3>5.6 渠道投入建议</h3>
+
+<table>
+  <thead><tr><th style="width:8%">排序</th><th style="width:26%">渠道</th><th style="width:16%">成本</th><th>理由</th></tr></thead>
+  <tbody>
+    <tr><td><span class="rank g">1</span></td><td><b>ImportYeti 免费版</b></td><td>0</td><td>按 HS 8504 直接拉出美国液浸变/箱变进口商<b>及其中国供应商</b>，一步得到「谁在买、买谁的、买多少」</td></tr>
+    <tr><td><span class="rank g">2</span></td><td><b>展会参展商名录</b></td><td>0</td><td>免费、可导出，同时解决买家与竞对</td></tr>
+    <tr><td><span class="rank g">3</span></td><td><b>NRECA + APPA 名录</b></td><td>0</td><td>美国合作社与市政直客的批量触达名单，纯免费</td></tr>
+    <tr><td><span class="rank a">4</span></td><td>Trademo / Volza（试用）</td><td>试用期</td><td>验证南美数据新鲜度后再付费。<b>不要先买再用</b></td></tr>
+  </tbody>
+</table>
+
+<!-- ============================= 6 ============================= -->
+<h2 class="pb"><span class="num">6</span>竞争格局与我方定位</h2>
+
+<h3>6.1 中国同行：华鹏是必须研究的样板</h3>
+
+<table>
+  <thead><tr><th style="width:14%">企业</th><th style="width:44%">已知战绩</th><th>做法</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><b>华鹏（江苏）</b></td>
+      <td>唯一进入北美十大变压器品牌的中国公司；29 台数据中心变压器交付日立能源美国分公司；拿下俄亥俄州某电厂 <b>765kV</b> 订单并一次性通过 ANSI 试验；4 台 500kV 进入美国高端市场</td>
+      <td><b>手工绕线技工梯队（平均工龄 18 年）+ 交期 10 个月</b>（行业 18–24 个月）。关税超 60% 时，美方客户愿承担一半成本</td>
+    </tr>
+    <tr><td>钱江电气</td><td>2025 年出口同比 <b>+35.6%</b>；新开西班牙、丹麦；订单排到 2026 年 7–8 月</td><td>直客 + 项目制开发</td></tr>
+    <tr><td>亚威（Yawei）</td><td>有北美专用站点，主打「符合美国标准」</td><td>官网合规叙事</td></tr>
+    <tr><td>正泰（Chint）</td><td>北美实体 NOARK Electric (USA)，加州 Pomona</td><td>以低压电器为主，变压器非主力</td></tr>
+    <tr><td>特变电工 / 保变天威</td><td>在墨西哥有存在，但认证周期长、买方对质量有顾虑</td><td>价格敏感型工业段</td></tr>
+  </tbody>
+</table>
+<p class="src">来源：腾讯新闻 2026-01-25 https://news.qq.com/rain/a/20260125A02IK400 ；钱江电气官网 https://www.qre.com.cn/index/news/detail/id/355.html ；IndexBox 墨西哥高压变压器市场 https://www.indexbox.io/store/mexico-high-voltage-power-transformer-market-analysis-forecast-size-trends-and-insights</p>
+
+<div class="callout">
+  <div class="t">华鹏案例里最重要的一条信息</div>
+  <p style="margin-bottom:0">「关税加到 60%，美方客户仍愿承担一半成本」——这说明<b>在交期极度紧张的市场里，价格不是决定因素，交付确定性才是</b>。这条经验直接支持本手册的核心策略：<b>以交期为主诉求，而不是以价格为主诉求</b>。同时华鹏的 10 个月交期是靠 18 年工龄的技工梯队撑起来的，这提示我方的交期承诺必须有产能与工艺基础，不能是销售话术。</p>
+</div>
+
+<h3>6.2 北美本土制造商</h3>
+
+<table class="wide">
+  <thead><tr><th style="width:20%">企业</th><th style="width:24%">定位</th><th style="width:28%">产能 / 交期</th><th>弱点</th></tr></thead>
+  <tbody>
+    <tr><td>Hitachi Energy</td><td>大型电力变、HVDC、GSU 龙头</td><td>South Boston VA $457M + Alamo TN $106M，<b>2027–28 投产</b></td><td>贵、交期长</td></tr>
+    <tr><td>Siemens Energy</td><td>大型电力变（含翻新）</td><td>Charlotte NC，首座美国大型变厂，$421M 扩张</td><td>起步晚</td></tr>
+    <tr><td>GE Vernova / Prolec GE</td><td>配电 + 中型电力变；墨西哥 Apodaca 可到 300MVA/400kV</td><td>单相挂式产能翻倍（$85M）</td><td>大型变产能有限</td></tr>
+    <tr><td>Eaton</td><td>配电变、箱变、开关设备</td><td>—</td><td>价格带偏高</td></tr>
+    <tr><td><b>Hammond Power Solutions</b>（加拿大）</td><td><b>干式变龙头</b></td><td>2025 Q2 收入约 $224M，同比 +14%</td><td><b>液浸式弱</b>——这是我方的切入点</td></tr>
+    <tr><td>Virginia Transformer</td><td>美国最大本土定制电力变，6 个厂区</td><td>—</td><td>定制为主，标准品弱</td></tr>
+    <tr><td>Central Moloney / Ermco</td><td>配电变</td><td>—</td><td>产品线窄</td></tr>
+    <tr><td>Howard Industries</td><td>变电站变 + 配电变</td><td>2026-06 宣布三县 $236M 扩张</td><td>交期排满</td></tr>
+    <tr><td>Niagara / Olsun</td><td>中小型液浸 / 干式</td><td>—</td><td>规模小</td></tr>
+  </tbody>
+</table>
+
+<h3>6.3 南美本土制造商</h3>
+<ul>
+  <li><b>WEG（巴西）</b>——拉美龙头，多次扩产（R$12 亿 / R$5.43 亿），墨西哥 Hidalgo 厂可达 230kV</li>
+  <li><b>Prolec GE / IEM（墨西哥）</b>——IEM 在 Tlalnepantla，做 60MVA/115kV 以下；墨西哥本土产能约 8000–12000 MVA/年，<b>仅满足 35–45% 需求</b></li>
+  <li><b>Tadeo Czerweny（阿根廷）</b>——Gálvez, Santa Fe</li>
+  <li>Romagnole、TRAFO（巴西）——未查到公开产能数据</li>
+</ul>
+<p>墨西哥市场：中国占中压变进口量的 <b>35–45%</b>，但 CFE 大型输电项目仍由 Hitachi/Siemens/ABB 主导；<b>本土交期 8–16 周 vs 进口 20–40 周</b>。</p>
+
+<div class="callout amber">
+  <div class="t">南美的一个反直觉事实</div>
+  <p style="margin-bottom:0">在墨西哥，<b>本土交期（8–16 周）比进口交期（20–40 周）更快</b>。这与北美的逻辑完全相反——在北美我们靠交期取胜，在墨西哥交期反而是我们的劣势。<b>因此南美的销售主张不能照搬北美</b>，应该转向：价格、认证规格（UL/cUL 是加分项）、以及大容量/定制机型的灵活性。</p>
+</div>
+
+<h3>6.4 我方的三个优势与三个短板</h3>
+
+<table>
+  <thead><tr><th style="width:50%">优势</th><th>短板</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>
+        <b>1. UL / cUL / CSA 三证齐备</b><br>
+        <span class="src">多数中国同行只有 UL 或仅部分型号；CSA 尤其稀缺，而它是加拿大合法安装的硬门槛。这项资质可直接写进开发信第一句。</span>
+      </td>
+      <td>
+        <b>1. 变电站变压器在美国已被政策封路</b><br>
+        <span class="src">EO 14420/14421 明确覆盖变电站变压器，DOE 细则 2026-12-24 前出台且可追溯已安装设备。<b>该产品线在美国短期应视为不可销售。</b></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>2. 产品线正好落在政策豁免区</b><br>
+        <span class="src">液浸式配电变与美式箱变属于「仅接入本地配电」的豁免范畴，而这恰是数据中心、工商业、合作社需求最旺、本土产能最紧的品类。</span>
+      </td>
+      <td>
+        <b>2. 美国综合税负约 50%</b><br>
+        <span class="src">MFN + 301 + 232 叠加。目前未查到公司有海外产能信息，若无法通过第三地组装重构原产地，价格优势将被大幅侵蚀。</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>3. ILAC 互认可降低南美认证成本</b><br>
+        <span class="src">UL/CSA 报告可被巴西 INMETRO 的 OCP 评估复用，只补巴西特有测试。这是相对纯中国同行的可量化成本优势。</span>
+      </td>
+      <td>
+        <b>3. 本地服务与库存缺位</b><br>
+        <span class="src">北美客户（尤其合作社与数据中心）把备件、现场服务、质保响应当硬指标。<b>若无本地库存或服务伙伴，即使中标也难复购。</b></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>6.5 定位陈述</h3>
+
+<div class="verdict">
+  <div class="t">一句话定位（可用于开发信首段）</div>
+  <p style="margin-bottom:0">「我们是一家中国变压器制造商，持有 UL、cUL 与 CSA 认证，专注于液浸式配电变压器与美式箱变。在当前配电变压器交期普遍超过 26 周的环境下，我们可以提供 <b>[X] 周</b>的交付周期。我们不参与大容量输电项目的竞争——那是另一类供应商的市场。」</p>
+  <p class="src" style="margin-top:2mm">注：<b>[X] 周必须填真实产能承诺</b>，不可夸大。交期是本策略的核心承诺，一次失约就毁掉整个定位。</p>
+</div>
+
+<!-- ============================= 7 ============================= -->
+<h2 class="pb"><span class="num">7</span>开发执行系统</h2>
+
+<h3>7.1 三条语言线，三种打法</h3>
+
+<p>弹药库已按语言分好，见 <code>弹药库/</code> 目录。三条线不能共用同一套文案。</p>
+
+<table class="wide">
+  <thead><tr><th style="width:12%">市场</th><th style="width:10%">语言</th><th style="width:24%">首要诉求</th><th style="width:22%">第二诉求</th><th>必须避免</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><b>美国</b></td><td>英语</td>
+      <td><b>交期</b>——「我们能在 X 周交付，本土制造商要 26–40 周」</td>
+      <td>UL/cUL 认证 + 价格透明（含税落地价）</td>
+      <td>回避「中国产」；含糊处理关税；承诺不可交付的交期</td>
+    </tr>
+    <tr>
+      <td><b>加拿大</b></td><td>英语 / 法语</td>
+      <td><b>CSA 合规 + 交期</b>——CSA C227.4 与 cUL 是硬门槛，本土交期 100 周以上</td>
+      <td>省级公用事业资格审查的配合意愿</td>
+      <td>忽略魁北克的法语要求；把加拿大当美国市场的一部分</td>
+    </tr>
+    <tr>
+      <td><b>墨西哥</b></td><td>西班牙语</td>
+      <td><b>价格 + 认证规格</b>——本土交期更快，不能打交期牌</td>
+      <td>NOM 合规路径、CFE 供应商注册配合</td>
+      <td>用英语发首封；假设本土客户了解中国制造</td>
+    </tr>
+    <tr>
+      <td><b>巴西</b></td><td>葡萄牙语</td>
+      <td><b>价格 + INMETRO 认证成本优势</b>（ILAC 报告复用）</td>
+      <td>Ex-Tarifário 关税优化、备件前置</td>
+      <td>用西语替代葡语——巴西人对此非常敏感</td>
+    </tr>
+    <tr>
+      <td><b>秘鲁 / 哥伦比亚</b></td><td>西班牙语</td>
+      <td><b>价格 + 售后响应能力</b>（「漏油了能不能 72 小时有人上门」）</td>
+      <td>矿业项目的定制能力</td>
+      <td>只谈价格不谈服务——拉美复购取决于服务而非价格</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>7.2 触达节奏：Mail Group 序列</h3>
+
+<p>沿用你现有方法论（<code>foreign-trade-email-dev</code> skill 的 Mail Group 打法），但针对本项目调整分工。北美与南美使用不同节奏——<b>北美决策快、南美关系重，序列长度应不同</b>。</p>
+
+<table>
+  <thead><tr><th style="width:10%">封次</th><th style="width:16%">间隔</th><th style="width:32%">北美（美/加）主题</th><th>南美（墨/巴/秘/哥）主题</th></tr></thead>
+  <tbody>
+    <tr><td>第 1 封</td><td>D0</td><td>交期 + 认证（一句话讲清我们能解决什么）</td><td>自我介绍 + 价格区间 + 认证能力</td></tr>
+    <tr><td>第 2 封</td><td>D3</td><td>产品规格单页（pad-mount 专项）</td><td>产品目录 + 认证文件（建立可信度）</td></tr>
+    <tr><td>第 3 封</td><td>D7</td><td>北美业绩案例（脱敏）</td><td>售后与备件方案（拉美最关心）</td></tr>
+    <tr><td>第 4 封</td><td>D12</td><td>关税与落地成本透明说明</td><td>本地代理合作方案</td></tr>
+    <tr><td>第 5 封</td><td>D20</td><td>产能预留（blanket PO）提案</td><td>付款条件与物流方案</td></tr>
+    <tr><td>第 6 封</td><td>D30</td><td>展会邀请 / 样品测试提议</td><td>样品与试单提议</td></tr>
+  </tbody>
+</table>
+
+<p class="src">单封字数与写作规范严格遵循 <code>foreign-trade-email-dev</code> skill 的自检清单（首封 ≤150 词、跟进 ≤120 词、无 spam 触发词、半角标点）。<b>本手册不重复该 skill 的规范，只提供本项目专属的内容策略。</b></p>
+
+<h3>7.3 报价策略：关税透明化报价法</h3>
+
+<ol>
+  <li><b>首轮报价必含落地成本拆解</b>——FOB + 关税估算 + 海运 + 内陆 + 保险。在约 50% 税负下，只报 FOB 会让客户在清关时产生巨大预期落差，直接毁掉信任。</li>
+  <li><b>明确标注税则时点</b>——「关税按 2026-XX-XX 生效税则估算，实际以清关时税则为准」。这句话既免责，也显示专业。</li>
+  <li><b>提供双版本</b>——「客户自行清关」与「我方 DDP」。很多北美客户有自己的报关行与税则意见，让他们自己核反而更快建立信任。</li>
+  <li><b>把 2027-12-31 当筹码</b>——对 &gt;10,000kVA 液浸变（8504.23），15% 档位 2027 年底到期，2028 年起回到 25%。<b>推动客户在 2027 年内完成清关，是真实可量化的价值主张</b>，不是话术。</li>
+  <li><b>南美单独定报价逻辑</b>——墨西哥关税 5%–35%、巴西 12.6%（可申请 Ex-Tarifário 至 0%）、哥伦比亚 10% + IVA 19%。<b>Ex-Tarifário 若能覆盖我方型号，II 从 12.6% 降至 0%，这是直接的报价武器</b>，应主动替客户申请。</li>
+</ol>
+
+<h3>7.4 品牌授权：用北美业绩做南美背书</h3>
+
+<div class="callout warn">
+  <div class="t">必须取得书面授权</div>
+  <p>南美买家对「你有没有在北美卖过」高度敏感，你现有的成交记录（AC Tesla、Wilson High Voltage、Black &amp; McDonald、Domino Highvoltage 等）是可以合法引用的北美业绩。<b>但引用客户名称与项目细节属于对外披露，必须先取得该客户的书面同意。</b></p>
+  <p style="margin-bottom:0">建议做法：起草一份简短的中英双语《Reference Authorization》邮件模板，向已成交客户请求「在投标与技术文件中作为案例引用」的授权，并明确可披露的范围（是否可提客户名、是否可提容量与型号、是否可提供联系人作为 reference call）。<b>未取得授权的，一律以脱敏方式表述</b>（如「北美某省级配电运营商，1000kVA 变电站变压器」）。</p>
+</div>
+
+<h3>7.5 复购的真正决定因素：售后与备件前置</h3>
+
+<p>调研中最一致的一条结论是：<b>拉美客户的复购取决于「漏油了能不能 72 小时内有人上门」，这比价格更决定能否摆脱低价竞争。</b></p>
+
+<ul>
+  <li><b>代理条件</b>——公开资料未查到可靠的佣金区间与独家条款数据（<b>不编造</b>）。可确定的行业逻辑：<b>先给非独家 + 首单业绩对赌换独家</b>；合同中必须明确认证成本与关税成本的承担方（巴西 INMETRO 年维护费是常被漏算的隐性成本，占初认证的 20%–40%）。</li>
+  <li><b>备件前置仓</b>——建议优先考虑圣保罗或墨西哥城，前置高频备件（套管、密封件、分接开关）。这是从「一单一议」走向「稳定复购」的分界线。</li>
+  <li><b>本地维修协作</b>——不一定要自建服务团队，可以先与当地电气服务商签协作协议，把「72 小时响应」变成可承诺的服务条款。</li>
+</ul>
+
+<!-- ============================= 8 ============================= -->
+<h2 class="pb"><span class="num">8</span>90 天行动计划</h2>
+
+<p>执行窗口：<b>2026-10-01 → 2026-12-31</b>。原则：<b>先修工具，再攻市场；先低成本动作，再付费投入。</b></p>
+
+<h3>第 1–2 周（10/01 – 10/14）：基础设施</h3>
+<table>
+  <thead><tr><th style="width:8%">序号</th><th style="width:46%">动作</th><th>验收标准</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>应用「南美市场权重补丁」，重建索引并跑自测</td><td><code>selftest_pipeline.py</code> 全绿；巴西/秘鲁/哥伦比亚买家不再被打 −15 与「非目标市场」标签</td></tr>
+    <tr><td>2</td><td>向报关行索取 10 位 HTS 级的<b>书面税则意见</b>（8504.21 / .22 / .23 / .33）</td><td>拿到书面文件，替换手册第 2 章的估算值</td></tr>
+    <tr><td>3</td><td>建立「关税测算表」，把税则意见固化成可复用的报价工具</td><td>输入 FOB 价可自动输出 DDP 参考价</td></tr>
+    <tr><td>4</td><td>起草《Reference Authorization》授权模板（中英双语）</td><td>可直接发送的邮件模板</td></tr>
+  </tbody>
+</table>
+
+<h3>第 3–4 周（10/15 – 10/28）：线索基建（零成本）</h3>
+<table>
+  <thead><tr><th style="width:8%">序号</th><th style="width:46%">动作</th><th>验收标准</th></tr></thead>
+  <tbody>
+    <tr><td>5</td><td>用 ImportYeti 免费版按 HS 8504 拉取美国液浸变/箱变进口商及其中国供应商</td><td>产出 ≥200 家美国进口商名单，含供应商列</td></tr>
+    <tr><td>6</td><td>导出 NRECA 会员名录 + APPA 按州市政名录</td><td>≥800 家合作社/市政机构，含所在州</td></tr>
+    <tr><td>7</td><td>抓取 DISTRIBUTECH / NRECA TechAdvantage 参展商名录</td><td>产出买家名单 + <b>中国同行名单</b>（竞对情报）</td></tr>
+    <tr><td>8</td><td>将南美首批目标客户 CSV 导入现有流水线</td><td><code>customs_data_fetch.py --adapter local_csv --profile manual</code> 跑通，产出分级线索</td></tr>
+  </tbody>
+</table>
+
+<h3>第 5–8 周（10/29 – 11/25）：认证与注册</h3>
+<table>
+  <thead><tr><th style="width:8%">序号</th><th style="width:46%">动作</th><th>验收标准</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><b>书面确认巴西 INMETRO 对液浸式配电变压器的强制性</b>（向 OCP 发函）</td><td>拿到书面答复。<b>这一条决定巴西是 6–12 个月门票还是可以先卖货</b></td></tr>
+    <tr><td>10</td><td>向巴西 OCP 提交 UL/CSA 报告的 ILAC 复用评估申请</td><td>拿到测试复用范围与报价</td></tr>
+    <tr><td>11</td><td>核实 Ex-Tarifário 是否覆盖我方型号</td><td>书面确认；若可申请，启动申请流程</td></tr>
+    <tr><td>12</td><td>确认墨西哥 NOM 是否承认 UL/cUL/CSA 标记</td><td>书面确认。<b>直接决定墨西哥认证成本</b></td></tr>
+    <tr><td>13</td><td>完成 CFE 供应商注册（墨西哥）</td><td>进入 CFE 合格供应商名录</td></tr>
+    <tr><td>14</td><td>注册巴西 CEMIG / CPFL / Neoenergia / Equatorial 供应商门户</td><td>4 家全部完成注册</td></tr>
+    <tr><td>15</td><td>确认秘鲁 OSINERGMIN / INACAL 的具体法规编号与流程</td><td>拿到官方文件，消除手册中的待核实项</td></tr>
+  </tbody>
+</table>
+
+<h3>第 9–12 周（11/26 – 12/31）：首轮触达</h3>
+<table>
+  <thead><tr><th style="width:8%">序号</th><th style="width:46%">动作</th><th>验收标准</th></tr></thead>
+  <tbody>
+    <tr><td>16</td><td>对加拿大客户与线索重新分级（零关税背景下价值重估）</td><td>产出加拿大优先名单</td></tr>
+    <tr><td>17</td><td>启动北美 Mail Group 序列，优先触达合作社、市政、EPC/分销商</td><td>首轮 ≥100 家触达，回复率基线记录</td></tr>
+    <tr><td>18</td><td>启动南美西语序列（墨西哥、秘鲁、哥伦比亚）</td><td>首轮 ≥50 家触达</td></tr>
+    <tr><td>19</td><td>启动南美葡语序列（巴西）</td><td>首轮 ≥30 家触达</td></tr>
+    <tr><td>20</td><td>锁定 2027 两场展会：NRECA PowerXchange（圣迭戈）+ DISTRIBUTECH（亚特兰大）</td><td>展位或参会注册完成</td></tr>
+    <tr><td>21</td><td>DOE 关于 EO 14420/14421 的实施细则跟踪（预计 12/24 前出台）</td><td>细则出台后 72 小时内产出影响评估</td></tr>
+  </tbody>
+</table>
+
+<h3>关键里程碑</h3>
+<div class="callout ok">
+  <div class="t">2026-12-31 应达到的状态</div>
+  <ul style="margin-bottom:0">
+    <li><b>工具层</b>：流水线权重已修；关税测算表可用；HTS 税则意见已落地</li>
+    <li><b>线索层</b>：北美 ≥1000 家、南美 ≥60 家可触达名单；南美目标已进流水线并完成分级</li>
+    <li><b>合规层</b>：巴西 INMETRO 强制性、墨西哥 NOM 承认范围两个关键问题<b>有书面答复</b>；CFE 与巴西四家公用事业供应商注册完成</li>
+    <li><b>触达层</b>：三语首轮序列全部启动，累计 ≥180 家触达</li>
+    <li><b>政策层</b>：EO 实施细则的影响评估已出</li>
+  </ul>
+</div>
+
+<!-- ============================= 附录 A ============================= -->
+<h2 class="pb"><span class="num">A</span>来源清单</h2>
+
+<p>本手册所有关键事实的来源，按主题归集，便于复查。</p>
+
+<h4>美国市场与关税</h4>
+<ul class="src">
+  <li>Power Magazine《Transformers in 2026》 https://www.powermag.com/transformers-in-2026-shortage-scramble-or-self-inflicted-crisis/</li>
+  <li>PV Magazine USA 2026-05-11 https://pv-magazine-usa.com/2026/05/11/u-s-transformer-market-faces-severe-supply-constraints-as-lead-times-extend-to-four-years/</li>
+  <li>distroforge 采购年报 https://distroforge.com/blog/transformer-procurement-2026/</li>
+  <li>Section 232 对电网设备影响 https://distroforge.com/blog/section-232-tariff-grid-equipment-procurement-impact/</li>
+  <li>BDO 关于最高法院 IEEPA 判决 https://www.bdo.com/insights/tax/supreme-court-invalidates-ieepa-tariffs-administration-replaces-with-new-surcharge-what-importers</li>
+  <li>Global Trade Alert https://www.globaltradealert.org/blog/from-ieepa-to-section-122</li>
+  <li>USTR 2026-07 事实清单 https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/july/fact-sheet-ustr-section-301-action-response-failure-60-economies-ban-imports-produced-forced-labor</li>
+  <li>Section 301 中国 2026 税率指南 https://customsbrokerusa.com/section-301-tariffs-china-2026-rate-guide/</li>
+  <li>Utility Dive 关于 DOE 能效规则 https://www.utilitydive.com/news/doe-mulls-changes-to-biden-era-transformer-rule-raising-utility-concerns/826440/</li>
+  <li>BABA 2025-2026 规则变更 https://www.trussfaber.com/news/build-america-buy-america-2025-2026-rule-changes</li>
+  <li>EO 14420 分析（Baker McKenzie） https://sanctionsnews.bakermckenzie.com/us-government-issues-executive-order-14420-to-secure-us-bulk-power-system/</li>
+  <li>PV Magazine 关于行政令 https://pv-magazine-usa.com/2026/08/27/executive-order-bans-foreign-produced-transformers-inverters-and-circuit-breakers-for-u-s-power-grid/</li>
+  <li>联邦公报 EO 文本 https://www.federalregister.gov/documents/2026/08/31/2026-17843/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system</li>
+</ul>
+
+<h4>加拿大</h4>
+<ul class="src">
+  <li>MarketsandMarkets 加拿大变压器市场 https://www.marketsandmarkets.com/Market-Reports/geography/transformer-market/canada</li>
+  <li>加拿大钢铝附加税令 SOR/2025-154 https://laws-lois.justice.gc.ca/eng/regulations/SOR-2025-154/FullText.html</li>
+  <li>加拿大 8504 关税查询 https://tariffcalc.ca/en/hs-code/8504</li>
+  <li>NRCan 能效法规 https://natural-resources.canada.ca/energy-efficiency/energy-efficiency-regulations</li>
+  <li>CSA C227.4:21 标准页 https://ccn-scc.ca/standardsdb/standards/4030981</li>
+  <li>加拿大变压器市场现状 https://www.whiting.ca/blog/transformers/the-state-of-the-canadian-transformer-market-today/</li>
+</ul>
+
+<h4>南美</h4>
+<ul class="src">
+  <li>巴西配电变压器市场 https://www.marketsandmarkets.com/Market-Reports/geography/distribution-transformer-market/brazil</li>
+  <li>南美配电变压器市场 https://www.marketsandmarkets.com/Market-Reports/geography/distribution-transformer-market/south-america</li>
+  <li>巴西 NCM 8504.21 查询 https://buscadorncm.com.br/ncm/85042100</li>
+  <li>INMETRO 液浸配电变压器能效页 https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/programa-brasileiro-de-etiquetagem/tabelas-de-eficiencia-energetica/transformadores-de-distribuicao-em-liquido-isolante</li>
+  <li>INMETRO RTAC002837 http://sistema-sil.inmetro.gov.br/rtac/RTAC002837.pdf</li>
+  <li>INMETRO 认证成本与周期（OCP 视角） https://iexcert.org.br/blog/quanto-custa-a-certificacao-inmetro/ ；https://iexcert.org.br/blog/prazo-da-certificacao-inmetro/</li>
+  <li>墨西哥 2026 关税令分析（White &amp; Case） https://www.whitecase.com/insight-alert/mexico-issues-presidential-decree-imposing-tariffs-185-tariff-lines-sectors</li>
+  <li>墨西哥 CFE 投资与中国厂商动态（中文行业媒体，需交叉验证） https://www.byqsc.net/news/show-12620.html</li>
+  <li>阿根廷外汇管制解除（Dentons） https://www.dentons.com/en/insights/alerts/2025/april/16/removal-of-foreign-exchange-controls-in-argentina</li>
+  <li>中秘 FTA 升级议定书（商务部） https://www.mofcom.gov.cn/xwfb/sjfzrfb/art/2024/art_51f23b9346494667b6f9313cf8671d6f.html</li>
+  <li>哥伦比亚 RETIE 修订动态 https://cidet.org.co/reglamentos-y-normativas/nuevo-reglamento-tecnico-de-instalaciones-electricas/</li>
+  <li>智利 SEC 认证 https://sec.custhelp.com/app/answers/detail/a_id/519/ ；https://www.tuvsud.com/en-us/services/product-certification/chile-sec</li>
+  <li>WEG 扩产公告 https://www.weg.net/institutional/US/en/news/result-and-investiments/weg-announces-investments-to-expand-transformer-production-capacity-in-brazil</li>
+</ul>
+
+<h4>竞争与渠道</h4>
+<ul class="src">
+  <li>中国变压器企业北美突破报道 https://news.qq.com/rain/a/20260125A02IK400</li>
+  <li>钱江电气出口数据 https://www.qre.com.cn/index/news/detail/id/355.html</li>
+  <li>正泰北美子公司 https://en.chint.com/foreign_subsidiary.html</li>
+  <li>IndexBox 墨西哥高压变压器市场 https://www.indexbox.io/store/mexico-high-voltage-power-transformer-market-analysis-forecast-size-trends-and-insights</li>
+  <li>中国机床出口因变压器无 UL 认证被扣案例 https://www.sohu.com/a/1002158178_121876151</li>
+  <li>NRECA 采购机会 https://www.electric.coop/sourcing-opportunities</li>
+  <li>APPA 会员名录 https://www.publicpower.org/our-members</li>
+  <li>Electricity Canada 会员 https://www.electricity.ca/membership/list-of-members/</li>
+</ul>
+
+<!-- ============================= 附录 B ============================= -->
+<h2><span class="num">B</span>待核实清单</h2>
+
+<p><b>本手册中所有未能取得权威来源证实的判断，集中列在这里。</b>这些不是「大概对」的结论，而是<b>在行动前必须解决的具体问题</b>。</p>
+
+<table class="wide">
+  <thead><tr><th style="width:6%">#</th><th style="width:30%">待核实事项</th><th style="width:14%">影响</th><th style="width:22%">核实方式</th><th>优先级</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><b>巴西 INMETRO 对液浸式配电变压器是强制还是自愿？</b><br><span class="src">INMETRO 官网挂自愿性规程 RTAC002837，中文行业文章称 ≤300kVA 强制——两者冲突</span></td>
+      <td>决定巴西进入周期是 6–12 个月还是可立即销售</td>
+      <td>向巴西 OCP 发正式函件确认</td>
+      <td><span class="tag no">最高</span></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><b>墨西哥 NOM 是否承认 UL/cUL/CSA 标记？</b><br><span class="src">行业文章称不承认，但该来源本身质量存疑</span></td>
+      <td>决定墨西哥认证成本量级</td>
+      <td>查墨西哥经济部 NOM 官方文件，或咨询墨西哥本地认证代理</td>
+      <td><span class="tag no">最高</span></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><b>中国产变压器美国综合税负的准确值</b><br><span class="src">手册第 2 章表格为基于公开公告的估算</span></td>
+      <td>直接决定报价</td>
+      <td>持牌报关行按 10 位 HTS 出书面税则意见</td>
+      <td><span class="tag no">最高</span></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><b>巴西 GECEX 852/2026 加税是否覆盖我方型号？Ex-Tarifário 能否适用？</b><br><span class="src">NCM 查询页显示 8504.21 存在 20% 例外清单，与标准 TEC 12.6% 冲突</span></td>
+      <td>巴西报价的 12.6% 关税能否降到 0%</td>
+      <td>按具体 NCM 逐一核对，或委托巴西本地报关代理确认</td>
+      <td><span class="tag no">最高</span></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><b>EO 编号究竟是 14420 还是 14421？</b><br><span class="src">两份调研分别引用 14420 与 14421，均指向 2026-08-26 签署的大电力系统行政令</span></td>
+      <td>影响合规文件引用与客户沟通的准确性</td>
+      <td>查联邦公报原文</td>
+      <td><span class="tag mid">高</span></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>秘鲁 OSINERGMIN / INACAL 对变压器的具体法规编号与认证流程</td>
+      <td>秘鲁进入路径</td>
+      <td>直接查官方机构网站，不要采信二手中文资料</td>
+      <td><span class="tag mid">高</span></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>DOE 2024 能效规则的最终命运（2026-06-15 RFI 结果）</td>
+      <td>产品设计是否需按 2029 标准提前投入</td>
+      <td>跟踪 docket EERE-2026-BT-STD-0333</td>
+      <td><span class="tag mid">中</span></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>加中 2026-01-16 协议细节是否涉及变压器</td>
+      <td>加拿大零关税假设的稳定性</td>
+      <td>查 CBSA / 加拿大财政部官方公告，不采信贸易商博客</td>
+      <td><span class="tag mid">中</span></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>南美本地代理的佣金区间与独家条款行业惯例</td>
+      <td>代理谈判的基准</td>
+      <td>未查到可靠公开数据。<b>建议通过 2–3 家现有代理实际谈判摸清</b></td>
+      <td><span class="tag info">低</span></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>我方在墨西哥/巴西的 60Hz 产品线是否已有型式试验数据可直接复用</td>
+      <td>认证周期</td>
+      <td>内部确认（本手册无法从外部判定）</td>
+      <td><span class="tag no">最高</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <div class="t">关于「不确定」的态度</div>
+  <p style="margin-bottom:0">上表 10 项里有 <b>5 项标记为最高优先级</b>，它们全部是「不解决就不能报价、不能签合同」的问题。<b>建议在第 1–2 周内集中解决第 1、2、3、4、10 项</b>——这五项是后续所有市场动作的前提。在这五项有书面答案之前，不要向任何客户给出承诺性的价格与交期。</p>
+</div>
+
+<div class="footnote">
+  <p><b>JZP 北美 + 南美 客户开发作战手册</b>　编制日期 2026-09-27　适用窗口 2026 Q4 – 2027</p>
+  <p>本手册基于公开来源编制，所有事实性陈述均标注来源。关税、交期、认证周期等数据具有时效性，重大决策前请以官方公告与专业机构书面意见为准。目标客户清单仅列可核实的机构与公开采购入口，未包含任何未经证实的联系方式。</p>
+</div>
+
+</div>
+</body>
+</html>

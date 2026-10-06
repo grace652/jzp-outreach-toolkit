@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# 海关线索流水线的工作数据：抓取/导出数据不进版本库
+# （付费平台导出文件可能受授权条款限制，且体积大）
+data/cache/
+data/raw/
+data/normalized/
+data/import_state.json

@@ -1,0 +1,200 @@
+{
+  "_comment": "行业数据源注册表。所有源均于 2026-10-03 在本机实测可达。新增源请先跑连通性测试。",
+  "version": "1.0",
+  "updated_at": "2026-10-03",
+  "sources": [
+    {
+      "id": "utilitydive",
+      "name": "Utility Dive",
+      "category": "market_supply",
+      "parser": "rss",
+      "url": "https://www.utilitydive.com/feeds/news/",
+      "credibility": "B",
+      "enabled": true,
+      "options": {
+        "browser_ua": false,
+        "follow_redirect": true,
+        "timeout": 20
+      },
+      "notes": "美国电力公用事业行业媒体，电网投资与变压器供给报道密集 ｜ 全站 feed，已开启相关性过滤",
+      "relevance_filter": true,
+      "max_age_days": 60
+    },
+    {
+      "id": "dcd",
+      "name": "Data Center Dynamics",
+      "category": "market_supply",
+      "parser": "rss",
+      "url": "https://www.datacenterdynamics.com/en/rss/",
+      "credibility": "B",
+      "enabled": false,
+      "options": {
+        "browser_ua": false,
+        "follow_redirect": true,
+        "timeout": 20
+      },
+      "notes": "⚠️ 2026-10-03 实测：内容以 IT/GPU/数据中心基建为主，与变压器设备相关性低，严格过滤后无可入库条目。已禁用",
+      "relevance_filter": true,
+      "max_age_days": 60,
+      "relevance_level": "strict"
+    },
+    {
+      "id": "eia",
+      "name": "EIA Today in Energy",
+      "category": "market_supply",
+      "parser": "rss",
+      "url": "https://www.eia.gov/rss/todayinenergy.xml",
+      "credibility": "A",
+      "enabled": true,
+      "options": {
+        "browser_ua": false,
+        "follow_redirect": true,
+        "timeout": 30
+      },
+      "notes": "美国能源信息署官方数据源（一手）。实测响应较慢，timeout 放宽到 30s ｜ 全站 feed，已开启相关性过滤",
+      "relevance_filter": true,
+      "max_age_days": 90
+    },
+    {
+      "id": "pvmagazine",
+      "name": "pv magazine USA",
+      "category": "market_supply",
+      "parser": "rss",
+      "url": "https://www.pv-magazine-usa.com/feed/",
+      "credibility": "B",
+      "enabled": false,
+      "options": {
+        "browser_ua": true,
+        "follow_redirect": true,
+        "timeout": 20,
+        "insecure_ssl": true
+      },
+      "notes": "⚠️ 2026-10-03 实测：内容全为光伏，严格相关性过滤后产出 0 条，且需 insecure_ssl。已禁用",
+      "relevance_filter": true,
+      "max_age_days": 90,
+      "relevance_level": "strict"
+    },
+    {
+      "id": "fedreg",
+      "name": "Federal Register",
+      "category": "standards_cert",
+      "parser": "json_federal_register",
+      "url": "https://www.federalregister.gov/api/v1/documents.json",
+      "credibility": "A",
+      "enabled": true,
+      "options": {
+        "browser_ua": false,
+        "follow_redirect": true,
+        "timeout": 20
+      },
+      "queries": [
+        "\"distribution transformer\"",
+        "\"power transformer\"",
+        "energy conservation standards transformer"
+      ],
+      "notes": "美国联邦公报官方 API（一手，JSON）。DOE 能效标准等法规原文出处",
+      "per_query_limit": 15,
+      "max_age_days": 120
+    },
+    {
+      "id": "edgar",
+      "name": "SEC EDGAR Full-Text Search",
+      "category": "customer_activity",
+      "parser": "json_edgar",
+      "url": "https://efts.sec.gov/LATEST/search-index",
+      "credibility": "A",
+      "enabled": true,
+      "options": {
+        "browser_ua": false,
+        "follow_redirect": true,
+        "timeout": 20
+      },
+      "queries": [
+        "\"transformer\""
+      ],
+      "notes": "美国上市公司公告全文检索（一手）。可发现客户/竞品的重大合同与产能动作 ｜ ⚠️ 只接受简单查询，多词短语会 SSL 断开",
+      "per_query_limit": 15,
+      "max_age_days": 90
+    },
+    {
+      "id": "gnews_market",
+      "name": "Google News · 市场与供给",
+      "category": "market_supply",
+      "parser": "rss_google_news",
+      "url": "https://news.google.com/rss/search",
+      "credibility": "C",
+      "enabled": true,
+      "options": {
+        "browser_ua": false,
+        "follow_redirect": true,
+        "timeout": 20
+      },
+      "queries": [
+        "transformer lead time",
+        "transformer supply shortage",
+        "power transformer grid investment"
+      ],
+      "notes": "⚠️ C 级聚合源 —— 只作线索发现。引用时必须打开原链接、标注真实媒体名，不得以 google.com 为出处",
+      "per_query_limit": 10,
+      "max_age_days": 30
+    },
+    {
+      "id": "gnews_competitor",
+      "name": "Google News · 竞品动态",
+      "category": "competitor",
+      "parser": "rss_google_news",
+      "url": "https://news.google.com/rss/search",
+      "credibility": "C",
+      "enabled": true,
+      "options": {
+        "browser_ua": false,
+        "follow_redirect": true,
+        "timeout": 20
+      },
+      "queries": [
+        "transformer manufacturer capacity",
+        "Hitachi Energy transformer",
+        "Prolec GE transformer"
+      ],
+      "notes": "⚠️ 竞品条目仅供内部参考。04_do_not_say.md 明令信中不得与竞品对比、不得点名对方独家品牌",
+      "per_query_limit": 10,
+      "max_age_days": 30
+    },
+    {
+      "id": "gnews_customer",
+      "name": "Google News · 客户业务动态",
+      "category": "customer_activity",
+      "parser": "rss_google_news",
+      "url": "https://news.google.com/rss/search",
+      "credibility": "C",
+      "enabled": true,
+      "options": {
+        "browser_ua": false,
+        "follow_redirect": true,
+        "timeout": 20
+      },
+      "queries": [
+        "utility substation transformer contract award",
+        "electric utility grid expansion project"
+      ],
+      "notes": "用于发现客户扩张/中标信号。后续可升级为按客户名逐个查询（P4）",
+      "per_query_limit": 10,
+      "max_age_days": 30
+    },
+    {
+      "id": "tdworld",
+      "name": "T&D World",
+      "category": "market_supply",
+      "parser": "rss",
+      "url": "https://www.tdworld.com/rss",
+      "credibility": "B",
+      "enabled": false,
+      "options": {
+        "browser_ua": true,
+        "follow_redirect": true,
+        "timeout": 20
+      },
+      "notes": "⚠️ 2026-10-03 实测连接失败（curl 000），可能是站点限制或代理问题，先禁用留待排查"
+    }
+  ]
+}

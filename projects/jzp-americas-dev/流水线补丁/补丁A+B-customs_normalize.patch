@@ -1,0 +1,38 @@
+--- a/scripts/customs_normalize.py
++++ b/scripts/customs_normalize.py
+@@ -155,6 +155,10 @@
+     "UNITED KINGDOM": "GB", "GERMANY": "DE", "INDIA": "IN", "VIETNAM": "VN",
+     "UZBEKISTAN": "UZ", "PHILIPPINES": "PH", "ECUADOR": "EC", "TANZANIA": "TZ",
+     "KENYA": "KE", "AUSTRALIA": "AU", "UNITED ARAB EMIRATES": "AE",
++    # 南美（2026-09 新增）。只加全名，不加 2 位码——见下方说明。
++    "BRAZIL": "BR", "CHILE": "CL", "PERU": "PE", "COLOMBIA": "CO",
++    "ARGENTINA": "AR", "BOLIVIA": "BO", "PARAGUAY": "PY", "URUGUAY": "UY",
++    "VENEZUELA": "VE", "GUYANA": "GY", "SURINAME": "SR",
+ }
+ 
+ # 国家名 → 2 位码的别名（含常见缩写）
+@@ -276,9 +280,23 @@
+ 
+ 
+ TARGET_MARKETS = {"US", "CA"}
+-SECONDARY_MARKETS = {"MX", "PR", "DO", "TT", "JM", "BS", "BB", "BZ", "GT", "HN", "PA", "CR"}
++SECONDARY_MARKETS = {
++    "MX", "PR", "DO", "TT", "JM", "BS", "BB", "BZ", "GT", "HN", "PA", "CR",
++    # 南美（2026-09 新增）。此前 BR/CL/PE/CO/AR/EC 等既不在 TARGET 也不在
++    # SECONDARY，会被判为「非目标市场」扣 15 分并打标签，与南美开发战略冲突。
++    # 60Hz 美标体系（与 UL/cUL/CSA + IEEE C57.12 产品线直接适配）：
++    "BR", "PE", "CO", "EC",
++    # 50Hz 欧标体系（同容量铁芯截面需加大，属重设计成本）：
++    "CL", "AR", "BO", "PY", "UY", "VE",
++}
+ 
++# 南美分层标签用（不参与打分，仅用于线索表打标与筛选）。
++# 60Hz 与 UL/cUL/CSA + IEEE C57.12 产品线直接适配，为第一梯队；
++# 50Hz 需重算铁芯截面与损耗，为第二轮。详见作战手册第 1.3 节。
++LATAM_60HZ_MARKETS = {"MX", "BR", "PE", "CO", "EC"}
++LATAM_50HZ_MARKETS = {"CL", "AR", "BO", "PY", "UY", "VE"}
+ 
++
+ # ---------------------------------------------------------------- HS 码
+ 
+ HS_STRONG = {"850421", "850422", "850423"}          # 液浸变压器（我方主力）

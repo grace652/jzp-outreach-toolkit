@@ -1,0 +1,14 @@
+--- a/scripts/lead_scoring.py
++++ b/scripts/lead_scoring.py
+@@ -230,6 +230,11 @@
+         tags.add("北美主攻")
+     elif c2 in cn.SECONDARY_MARKETS:
+         add(2, WEIGHTS[2][0], f"次级美洲市场（{c2}）")
++        # 南美分层标签（不影响分数，只用于线索表筛选与话术分组）
++        if c2 in cn.LATAM_60HZ_MARKETS:
++            tags.add("南美60Hz优先")
++        elif c2 in cn.LATAM_50HZ_MARKETS:
++            tags.add("南美50Hz第二轮")
+     elif c2:
+         add(3, WEIGHTS[3][0], f"非目标市场（{c2}）")
+         tags.add("非目标市场")
